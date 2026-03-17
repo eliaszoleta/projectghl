@@ -6,13 +6,15 @@
  *   node src/index.js --pipeline → Pipeline only
  *   node src/index.js --fields   → Custom fields only
  *   node src/index.js --tags     → Tags only
- *   node src/index.js --workflows → Print workflow blueprints only
+ *   node src/index.js --workflows  → Print workflow blueprints only
+ *   node src/index.js --templates  → Create email & SMS templates
  */
 
 import 'dotenv/config';
 import { setupPipeline } from './setupPipeline.js';
 import { setupCustomFields } from './setupCustomFields.js';
 import { setupTags } from './setupTags.js';
+import { setupTemplates } from './setupTemplates.js';
 import { printBlueprint as printWF001 } from './workflows/wf001_registration.js';
 import { printBlueprint as printWF002 } from './workflows/wf002_reminders.js';
 import { printBlueprint as printWF003 } from './workflows/wf003_postWebinarAttended.js';
@@ -54,6 +56,10 @@ async function runApiSetup() {
 
     if (runAll || args.includes('--tags')) {
       await setupTags(log);
+    }
+
+    if (runAll || args.includes('--templates')) {
+      await setupTemplates(log);
     }
   } catch (err) {
     log(`\n  ✗ API Error: ${err.message}`);
@@ -165,7 +171,7 @@ function runWorkflowBlueprints() {
 
 // ── Main ───────────────────────────────────────────────────────────────────
 
-if (runAll || args.some((a) => ['--pipeline', '--fields', '--tags'].includes(a))) {
+if (runAll || args.some((a) => ['--pipeline', '--fields', '--tags', '--templates'].includes(a))) {
   await runApiSetup();
 }
 
