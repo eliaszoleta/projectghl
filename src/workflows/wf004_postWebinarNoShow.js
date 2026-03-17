@@ -6,6 +6,90 @@
  *  Contacts who registered but did NOT attend get this tag.)
  */
 
+// ── Email Copy ─────────────────────────────────────────────────────────────
+
+export const EMAIL_MISSED = {
+  subject: 'We missed you – here\'s the replay 🎬',
+  body: `Hi {{contact.firstName}},
+
+Looks like life got in the way — totally okay! We missed you at the webinar, but we've got you covered.
+
+Here's the replay so you can catch everything you missed:
+👉 [REPLAY LINK HERE]
+
+The replay covers:
+• [Key topic 1]
+• [Key topic 2]
+• [Key topic 3]
+
+It's available for a limited time, so make sure you watch it soon!
+
+[Your Name / Brand]
+[Unsubscribe]`,
+};
+
+export const EMAIL_SOFT_OFFER = {
+  subject: 'Did you get a chance to watch the replay?',
+  body: `Hi {{contact.firstName}},
+
+I hope you got a chance to watch the replay from the webinar!
+
+If you did — and you're ready to take the next step — I'd love to invite you to check out [COURSE NAME].
+
+It's designed specifically for people who want to [main outcome], and right now there's a special offer available:
+👉 [OFFER LINK]
+
+No pressure at all. Just wanted to make sure you had the chance.
+
+[Your Name / Brand]
+[Unsubscribe]`,
+};
+
+export const EMAIL_NUDGE = {
+  subject: 'Still thinking about [COURSE NAME]?',
+  body: `Hi {{contact.firstName}},
+
+Just checking in — did you get a chance to look at [COURSE NAME]?
+
+Here's a quick summary of what's inside:
+✅ [Module 1 – result]
+✅ [Module 2 – result]
+✅ [Module 3 – result]
+
+Plus you get [BONUS] when you join this week.
+
+👉 Check it out: [OFFER LINK]
+
+The offer closes [DATE].
+
+[Your Name / Brand]
+[Unsubscribe]`,
+};
+
+export const EMAIL_LAST_CHANCE = {
+  subject: '⏳ Last chance to join [COURSE NAME]',
+  body: `Hi {{contact.firstName}},
+
+This is the last email I'll send about this — promise!
+
+The offer for [COURSE NAME] closes today. After that, the special pricing goes away.
+
+If you've been on the fence, now is the time.
+
+👉 Join here: [OFFER LINK]
+
+See you on the inside,
+
+[Your Name / Brand]
+[Unsubscribe]`,
+};
+
+// ── SMS Copy ───────────────────────────────────────────────────────────────
+
+export const SMS_NUDGE = {
+  body: `{{contact.firstName}}, wanted to make sure you saw the replay and offer for [COURSE NAME] 👉 [OFFER LINK] Closes [DATE]. STOP to opt out.`,
+};
+
 export const WF004 = {
   id: 'EZ-004',
   name: '[EZ-004] Post-Webinar – No-Show',
@@ -89,90 +173,6 @@ export const WF004 = {
       body: EMAIL_LAST_CHANCE,
     },
   ],
-};
-
-// ── Email Copy ─────────────────────────────────────────────────────────────
-
-export const EMAIL_MISSED = {
-  subject: 'We missed you – here\'s the replay 🎬',
-  body: `Hi {{contact.firstName}},
-
-Looks like life got in the way — totally okay! We missed you at the webinar, but we've got you covered.
-
-Here's the replay so you can catch everything you missed:
-👉 [REPLAY LINK HERE]
-
-The replay covers:
-• [Key topic 1]
-• [Key topic 2]
-• [Key topic 3]
-
-It's available for a limited time, so make sure you watch it soon!
-
-[Your Name / Brand]
-[Unsubscribe]`,
-};
-
-export const EMAIL_SOFT_OFFER = {
-  subject: 'Did you get a chance to watch the replay?',
-  body: `Hi {{contact.firstName}},
-
-I hope you got a chance to watch the replay from the webinar!
-
-If you did — and you're ready to take the next step — I'd love to invite you to check out [COURSE NAME].
-
-It's designed specifically for people who want to [main outcome], and right now there's a special offer available:
-👉 [OFFER LINK]
-
-No pressure at all. Just wanted to make sure you had the chance.
-
-[Your Name / Brand]
-[Unsubscribe]`,
-};
-
-export const EMAIL_NUDGE = {
-  subject: 'Still thinking about [COURSE NAME]?',
-  body: `Hi {{contact.firstName}},
-
-Just checking in — did you get a chance to look at [COURSE NAME]?
-
-Here's a quick summary of what's inside:
-✅ [Module 1 – result]
-✅ [Module 2 – result]
-✅ [Module 3 – result]
-
-Plus you get [BONUS] when you join this week.
-
-👉 Check it out: [OFFER LINK]
-
-The offer closes [DATE].
-
-[Your Name / Brand]
-[Unsubscribe]`,
-};
-
-export const EMAIL_LAST_CHANCE = {
-  subject: '⏳ Last chance to join [COURSE NAME]',
-  body: `Hi {{contact.firstName}},
-
-This is the last email I'll send about this — promise!
-
-The offer for [COURSE NAME] closes today. After that, the special pricing goes away.
-
-If you've been on the fence, now is the time.
-
-👉 Join here: [OFFER LINK]
-
-See you on the inside,
-
-[Your Name / Brand]
-[Unsubscribe]`,
-};
-
-// ── SMS Copy ───────────────────────────────────────────────────────────────
-
-export const SMS_NUDGE = {
-  body: `{{contact.firstName}}, wanted to make sure you saw the replay and offer for [COURSE NAME] 👉 [OFFER LINK] Closes [DATE]. STOP to opt out.`,
 };
 
 export function printBlueprint(log) {

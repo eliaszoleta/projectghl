@@ -10,129 +10,6 @@
  *  4. Move pipeline stage to "Attended")
  */
 
-export const WF003 = {
-  id: 'EZ-003',
-  name: '[EZ-003] Post-Webinar – Attended',
-  trigger: {
-    type: 'Tag Added',
-    tag: 'ez_webinar-attended',
-  },
-  steps: [
-    // ── Immediate (within 1 hour after webinar) ────────────────────────────
-    {
-      step: 1,
-      action: 'Move Opportunity Stage',
-      pipeline: '[EZ-006] Webinar Pipeline',
-      stage: 'Attended',
-    },
-    {
-      step: 2,
-      action: 'Remove Tag',
-      value: 'ez_webinar-registered',
-    },
-    {
-      step: 3,
-      action: 'Send Email',
-      templateName: '[EZ-EMAIL-05] Replay + Thank You (Attended)',
-      body: EMAIL_REPLAY_ATTENDED,
-    },
-
-    // ── Day 1 After: Offer Intro ───────────────────────────────────────────
-    {
-      step: 4,
-      action: 'Wait',
-      duration: '24 hours',
-    },
-    {
-      step: 5,
-      action: 'Add Tag',
-      value: 'ez_webinar-offer-sent',
-    },
-    {
-      step: 6,
-      action: 'Move Opportunity Stage',
-      pipeline: '[EZ-006] Webinar Pipeline',
-      stage: 'Offer Sent',
-    },
-    {
-      step: 7,
-      action: 'Send Email',
-      templateName: '[EZ-EMAIL-06] Offer Day 1 (Attended)',
-      body: EMAIL_OFFER_D1,
-    },
-    {
-      step: 8,
-      action: 'Send SMS',
-      templateName: '[EZ-SMS-05] Offer Day 1 (Attended)',
-      body: SMS_OFFER_D1,
-    },
-
-    // ── Day 3 After: Value + Reminder ──────────────────────────────────────
-    {
-      step: 9,
-      action: 'Wait',
-      duration: '48 hours',
-    },
-    {
-      step: 10,
-      action: 'Send Email',
-      templateName: '[EZ-EMAIL-07] Offer Day 3 (Attended)',
-      body: EMAIL_OFFER_D3,
-    },
-
-    // ── Day 5 After: Social Proof ──────────────────────────────────────────
-    {
-      step: 11,
-      action: 'Wait',
-      duration: '48 hours',
-    },
-    {
-      step: 12,
-      action: 'Send Email',
-      templateName: '[EZ-EMAIL-08] Offer Day 5 (Attended)',
-      body: EMAIL_OFFER_D5,
-    },
-    {
-      step: 13,
-      action: 'Send SMS',
-      templateName: '[EZ-SMS-06] Offer Day 5 (Attended)',
-      body: SMS_OFFER_D5,
-    },
-
-    // ── Day 6 After: Urgency ───────────────────────────────────────────────
-    {
-      step: 14,
-      action: 'Wait',
-      duration: '24 hours',
-    },
-    {
-      step: 15,
-      action: 'Send Email',
-      templateName: '[EZ-EMAIL-09] Urgency – Offer Closes Tomorrow',
-      body: EMAIL_URGENCY,
-    },
-
-    // ── Day 7 After: Last Chance ───────────────────────────────────────────
-    {
-      step: 16,
-      action: 'Wait',
-      duration: '24 hours',
-    },
-    {
-      step: 17,
-      action: 'Send Email',
-      templateName: '[EZ-EMAIL-10] Last Chance',
-      body: EMAIL_LAST_CHANCE,
-    },
-    {
-      step: 18,
-      action: 'Send SMS',
-      templateName: '[EZ-SMS-07] Last Chance',
-      body: SMS_LAST_CHANCE,
-    },
-  ],
-};
-
 // ── Email Copy ─────────────────────────────────────────────────────────────
 
 export const EMAIL_REPLAY_ATTENDED = {
@@ -265,6 +142,129 @@ export const SMS_OFFER_D5 = {
 
 export const SMS_LAST_CHANCE = {
   body: `LAST CHANCE {{contact.firstName}}! Offer closes TODAY 🚪 [OFFER LINK] – STOP to opt out.`,
+};
+
+export const WF003 = {
+  id: 'EZ-003',
+  name: '[EZ-003] Post-Webinar – Attended',
+  trigger: {
+    type: 'Tag Added',
+    tag: 'ez_webinar-attended',
+  },
+  steps: [
+    // ── Immediate (within 1 hour after webinar) ────────────────────────────
+    {
+      step: 1,
+      action: 'Move Opportunity Stage',
+      pipeline: '[EZ-006] Webinar Pipeline',
+      stage: 'Attended',
+    },
+    {
+      step: 2,
+      action: 'Remove Tag',
+      value: 'ez_webinar-registered',
+    },
+    {
+      step: 3,
+      action: 'Send Email',
+      templateName: '[EZ-EMAIL-05] Replay + Thank You (Attended)',
+      body: EMAIL_REPLAY_ATTENDED,
+    },
+
+    // ── Day 1 After: Offer Intro ───────────────────────────────────────────
+    {
+      step: 4,
+      action: 'Wait',
+      duration: '24 hours',
+    },
+    {
+      step: 5,
+      action: 'Add Tag',
+      value: 'ez_webinar-offer-sent',
+    },
+    {
+      step: 6,
+      action: 'Move Opportunity Stage',
+      pipeline: '[EZ-006] Webinar Pipeline',
+      stage: 'Offer Sent',
+    },
+    {
+      step: 7,
+      action: 'Send Email',
+      templateName: '[EZ-EMAIL-06] Offer Day 1 (Attended)',
+      body: EMAIL_OFFER_D1,
+    },
+    {
+      step: 8,
+      action: 'Send SMS',
+      templateName: '[EZ-SMS-05] Offer Day 1 (Attended)',
+      body: SMS_OFFER_D1,
+    },
+
+    // ── Day 3 After: Value + Reminder ──────────────────────────────────────
+    {
+      step: 9,
+      action: 'Wait',
+      duration: '48 hours',
+    },
+    {
+      step: 10,
+      action: 'Send Email',
+      templateName: '[EZ-EMAIL-07] Offer Day 3 (Attended)',
+      body: EMAIL_OFFER_D3,
+    },
+
+    // ── Day 5 After: Social Proof ──────────────────────────────────────────
+    {
+      step: 11,
+      action: 'Wait',
+      duration: '48 hours',
+    },
+    {
+      step: 12,
+      action: 'Send Email',
+      templateName: '[EZ-EMAIL-08] Offer Day 5 (Attended)',
+      body: EMAIL_OFFER_D5,
+    },
+    {
+      step: 13,
+      action: 'Send SMS',
+      templateName: '[EZ-SMS-06] Offer Day 5 (Attended)',
+      body: SMS_OFFER_D5,
+    },
+
+    // ── Day 6 After: Urgency ───────────────────────────────────────────────
+    {
+      step: 14,
+      action: 'Wait',
+      duration: '24 hours',
+    },
+    {
+      step: 15,
+      action: 'Send Email',
+      templateName: '[EZ-EMAIL-09] Urgency – Offer Closes Tomorrow',
+      body: EMAIL_URGENCY,
+    },
+
+    // ── Day 7 After: Last Chance ───────────────────────────────────────────
+    {
+      step: 16,
+      action: 'Wait',
+      duration: '24 hours',
+    },
+    {
+      step: 17,
+      action: 'Send Email',
+      templateName: '[EZ-EMAIL-10] Last Chance',
+      body: EMAIL_LAST_CHANCE,
+    },
+    {
+      step: 18,
+      action: 'Send SMS',
+      templateName: '[EZ-SMS-07] Last Chance',
+      body: SMS_LAST_CHANCE,
+    },
+  ],
 };
 
 export function printBlueprint(log) {

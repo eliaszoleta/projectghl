@@ -7,6 +7,77 @@
  * Build in GHL → Automations → Workflows → + New Workflow
  */
 
+// ── Email Copy ─────────────────────────────────────────────────────────────
+
+export const EMAIL_3_DAYS = {
+  subject: '📅 Your webinar is in 3 days – here\'s what to expect',
+  body: `Hi {{contact.firstName}},
+
+Just a reminder — you're registered for the webinar in 3 days!
+
+📅 Date: {{custom.ez_webinar_date}}
+🔗 Your join link: {{custom.ez_zoom_join_link}}
+
+Here's a quick preview of what we'll cover:
+• [Key topic 1]
+• [Key topic 2]
+• [Key topic 3]
+
+We recommend joining 5 minutes early to make sure your audio and video are working.
+
+See you soon!
+
+[Your Name / Brand]
+[Unsubscribe]`,
+};
+
+export const EMAIL_1_DAY = {
+  subject: '⏰ Tomorrow! Your webinar link is inside',
+  body: `Hi {{contact.firstName}},
+
+Tomorrow is the big day! We're going live and we'd love to see you there.
+
+📅 Date: {{custom.ez_webinar_date}}
+🔗 Your personal join link: {{custom.ez_zoom_join_link}}
+
+Pro tip: Add this link to your calendar now so it's easy to find tomorrow.
+
+Can't wait to see you!
+
+[Your Name / Brand]
+[Unsubscribe]`,
+};
+
+export const EMAIL_1_HOUR = {
+  subject: '🚨 We go live in 1 hour – join link inside',
+  body: `Hi {{contact.firstName}},
+
+In just ONE HOUR we go live. Don't miss it!
+
+🔗 Click here to join: {{custom.ez_zoom_join_link}}
+
+We'll be starting right on time, so make sure you grab a seat early.
+
+See you in there!
+
+[Your Name / Brand]
+[Unsubscribe]`,
+};
+
+// ── SMS Copy ───────────────────────────────────────────────────────────────
+
+export const SMS_1_DAY = {
+  body: `Hey {{contact.firstName}}! Webinar tomorrow – {{custom.ez_webinar_date}}. Your link: {{custom.ez_zoom_join_link}} – STOP to unsubscribe.`,
+};
+
+export const SMS_1_HOUR = {
+  body: `{{contact.firstName}}, we go LIVE in 1 hour! Join here: {{custom.ez_zoom_join_link}} – STOP to unsubscribe.`,
+};
+
+export const SMS_15_MIN = {
+  body: `{{contact.firstName}}, we're LIVE in 15 minutes! Don't miss it 👉 {{custom.ez_zoom_join_link}}`,
+};
+
 export const WF002 = {
   id: 'EZ-002',
   name: '[EZ-002] Webinar Reminder Sequence',
@@ -80,77 +151,6 @@ export const WF002 = {
       body: SMS_15_MIN,
     },
   ],
-};
-
-// ── Email Copy ─────────────────────────────────────────────────────────────
-
-export const EMAIL_3_DAYS = {
-  subject: '📅 Your webinar is in 3 days – here\'s what to expect',
-  body: `Hi {{contact.firstName}},
-
-Just a reminder — you're registered for the webinar in 3 days!
-
-📅 Date: {{custom.ez_webinar_date}}
-🔗 Your join link: {{custom.ez_zoom_join_link}}
-
-Here's a quick preview of what we'll cover:
-• [Key topic 1]
-• [Key topic 2]
-• [Key topic 3]
-
-We recommend joining 5 minutes early to make sure your audio and video are working.
-
-See you soon!
-
-[Your Name / Brand]
-[Unsubscribe]`,
-};
-
-export const EMAIL_1_DAY = {
-  subject: '⏰ Tomorrow! Your webinar link is inside',
-  body: `Hi {{contact.firstName}},
-
-Tomorrow is the big day! We're going live and we'd love to see you there.
-
-📅 Date: {{custom.ez_webinar_date}}
-🔗 Your personal join link: {{custom.ez_zoom_join_link}}
-
-Pro tip: Add this link to your calendar now so it's easy to find tomorrow.
-
-Can't wait to see you!
-
-[Your Name / Brand]
-[Unsubscribe]`,
-};
-
-export const EMAIL_1_HOUR = {
-  subject: '🚨 We go live in 1 hour – join link inside',
-  body: `Hi {{contact.firstName}},
-
-In just ONE HOUR we go live. Don't miss it!
-
-🔗 Click here to join: {{custom.ez_zoom_join_link}}
-
-We'll be starting right on time, so make sure you grab a seat early.
-
-See you in there!
-
-[Your Name / Brand]
-[Unsubscribe]`,
-};
-
-// ── SMS Copy ───────────────────────────────────────────────────────────────
-
-export const SMS_1_DAY = {
-  body: `Hey {{contact.firstName}}! Webinar tomorrow – {{custom.ez_webinar_date}}. Your link: {{custom.ez_zoom_join_link}} – STOP to unsubscribe.`,
-};
-
-export const SMS_1_HOUR = {
-  body: `{{contact.firstName}}, we go LIVE in 1 hour! Join here: {{custom.ez_zoom_join_link}} – STOP to unsubscribe.`,
-};
-
-export const SMS_15_MIN = {
-  body: `{{contact.firstName}}, we're LIVE in 15 minutes! Don't miss it 👉 {{custom.ez_zoom_join_link}}`,
 };
 
 export function printBlueprint(log) {

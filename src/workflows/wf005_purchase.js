@@ -7,97 +7,6 @@
  * This workflow fires when a contact purchases the course.
  */
 
-export const WF005 = {
-  id: 'EZ-005',
-  name: '[EZ-005] Purchase & Membership Access',
-  trigger: {
-    type: 'Order Form Submitted',
-    note: 'Select your GHL order form connected to Stripe. Alternatively trigger on "Payment Received" once Stripe is connected.',
-  },
-  steps: [
-    // ── Immediate: Stop Offer Sequences ───────────────────────────────────
-    {
-      step: 1,
-      action: 'Remove from Workflow',
-      workflows: ['[EZ-003] Post-Webinar – Attended', '[EZ-004] Post-Webinar – No-Show'],
-      note: 'Stop sending offer emails once they purchase. Use "Remove from Workflow" action.',
-    },
-    {
-      step: 2,
-      action: 'Remove Tag',
-      values: ['ez_webinar-offer-sent'],
-    },
-    {
-      step: 3,
-      action: 'Add Tag',
-      values: ['ez_customer', 'ez_course-member'],
-    },
-    {
-      step: 4,
-      action: 'Move Opportunity Stage',
-      pipeline: '[EZ-006] Webinar Pipeline',
-      stage: 'Purchased',
-    },
-
-    // ── Grant Membership Access ────────────────────────────────────────────
-    {
-      step: 5,
-      action: 'Grant Membership Access',
-      product: '[EZ-009] Online Course',
-      note: 'Go to action "Grant offer access" → select your GHL Membership product named [EZ-009] Online Course',
-    },
-
-    // ── Confirmation Communications ────────────────────────────────────────
-    {
-      step: 6,
-      action: 'Send Email',
-      templateName: '[EZ-EMAIL-15] Purchase Confirmation + Course Access',
-      body: EMAIL_PURCHASE_CONFIRM,
-    },
-    {
-      step: 7,
-      action: 'Send SMS',
-      templateName: '[EZ-SMS-09] Purchase Confirmation',
-      body: SMS_PURCHASE_CONFIRM,
-    },
-
-    // ── Onboarding Sequence ────────────────────────────────────────────────
-    {
-      step: 8,
-      action: 'Wait',
-      duration: '1 day',
-    },
-    {
-      step: 9,
-      action: 'Send Email',
-      templateName: '[EZ-EMAIL-16] Onboarding Day 1 – Getting Started',
-      body: EMAIL_ONBOARDING_D1,
-    },
-    {
-      step: 10,
-      action: 'Wait',
-      duration: '2 days',
-    },
-    {
-      step: 11,
-      action: 'Send Email',
-      templateName: '[EZ-EMAIL-17] Onboarding Day 3 – Your First Win',
-      body: EMAIL_ONBOARDING_D3,
-    },
-    {
-      step: 12,
-      action: 'Wait',
-      duration: '4 days',
-    },
-    {
-      step: 13,
-      action: 'Send Email',
-      templateName: '[EZ-EMAIL-18] Onboarding Day 7 – Check-In',
-      body: EMAIL_ONBOARDING_D7,
-    },
-  ],
-};
-
 // ── Email Copy ─────────────────────────────────────────────────────────────
 
 export const EMAIL_PURCHASE_CONFIRM = {
@@ -187,6 +96,97 @@ And remember — if you ever get stuck or have a question, just reply to this em
 
 export const SMS_PURCHASE_CONFIRM = {
   body: `🎉 You're in {{contact.firstName}}! Access [COURSE NAME] here: [MEMBERSHIP PORTAL LINK] – Welcome! STOP to opt out.`,
+};
+
+export const WF005 = {
+  id: 'EZ-005',
+  name: '[EZ-005] Purchase & Membership Access',
+  trigger: {
+    type: 'Order Form Submitted',
+    note: 'Select your GHL order form connected to Stripe. Alternatively trigger on "Payment Received" once Stripe is connected.',
+  },
+  steps: [
+    // ── Immediate: Stop Offer Sequences ───────────────────────────────────
+    {
+      step: 1,
+      action: 'Remove from Workflow',
+      workflows: ['[EZ-003] Post-Webinar – Attended', '[EZ-004] Post-Webinar – No-Show'],
+      note: 'Stop sending offer emails once they purchase. Use "Remove from Workflow" action.',
+    },
+    {
+      step: 2,
+      action: 'Remove Tag',
+      values: ['ez_webinar-offer-sent'],
+    },
+    {
+      step: 3,
+      action: 'Add Tag',
+      values: ['ez_customer', 'ez_course-member'],
+    },
+    {
+      step: 4,
+      action: 'Move Opportunity Stage',
+      pipeline: '[EZ-006] Webinar Pipeline',
+      stage: 'Purchased',
+    },
+
+    // ── Grant Membership Access ────────────────────────────────────────────
+    {
+      step: 5,
+      action: 'Grant Membership Access',
+      product: '[EZ-009] Online Course',
+      note: 'Go to action "Grant offer access" → select your GHL Membership product named [EZ-009] Online Course',
+    },
+
+    // ── Confirmation Communications ────────────────────────────────────────
+    {
+      step: 6,
+      action: 'Send Email',
+      templateName: '[EZ-EMAIL-15] Purchase Confirmation + Course Access',
+      body: EMAIL_PURCHASE_CONFIRM,
+    },
+    {
+      step: 7,
+      action: 'Send SMS',
+      templateName: '[EZ-SMS-09] Purchase Confirmation',
+      body: SMS_PURCHASE_CONFIRM,
+    },
+
+    // ── Onboarding Sequence ────────────────────────────────────────────────
+    {
+      step: 8,
+      action: 'Wait',
+      duration: '1 day',
+    },
+    {
+      step: 9,
+      action: 'Send Email',
+      templateName: '[EZ-EMAIL-16] Onboarding Day 1 – Getting Started',
+      body: EMAIL_ONBOARDING_D1,
+    },
+    {
+      step: 10,
+      action: 'Wait',
+      duration: '2 days',
+    },
+    {
+      step: 11,
+      action: 'Send Email',
+      templateName: '[EZ-EMAIL-17] Onboarding Day 3 – Your First Win',
+      body: EMAIL_ONBOARDING_D3,
+    },
+    {
+      step: 12,
+      action: 'Wait',
+      duration: '4 days',
+    },
+    {
+      step: 13,
+      action: 'Send Email',
+      templateName: '[EZ-EMAIL-18] Onboarding Day 7 – Check-In',
+      body: EMAIL_ONBOARDING_D7,
+    },
+  ],
 };
 
 export function printBlueprint(log) {
