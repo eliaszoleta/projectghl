@@ -6,6 +6,39 @@
  * Build this workflow in GHL → Automations → Workflows → + New Workflow
  */
 
+// ── Email Templates ────────────────────────────────────────────────────────
+
+export const EMAIL_CONFIRMATION = {
+  subject: "You're registered! Here's your webinar info 🎉",
+  body: `Hi {{contact.firstName}},
+
+You're officially registered for the webinar!
+
+📅 Date: {{custom.ez_webinar_date}}
+🔗 Your personal join link: {{custom.ez_zoom_join_link}}
+
+Add it to your calendar so you don't miss it:
+[Add to Google Calendar] [Add to Outlook]
+
+We're so excited to have you join us. In this webinar you'll learn:
+• [Key learning point 1]
+• [Key learning point 2]
+• [Key learning point 3]
+
+See you there!
+
+[Your Name / Brand]
+[Unsubscribe]`,
+};
+
+// ── SMS Templates ──────────────────────────────────────────────────────────
+
+export const SMS_CONFIRMATION = {
+  body: `Hey {{contact.firstName}}! You're registered 🎉 Webinar on {{custom.ez_webinar_date}}. Your join link: {{custom.ez_zoom_join_link}} – Reply STOP to unsubscribe.`,
+};
+
+// ── Workflow Blueprint ──────────────────────────────────────────────────────
+
 export const WF001 = {
   id: 'EZ-001',
   name: '[EZ-001] Webinar Registration',
@@ -44,37 +77,6 @@ export const WF001 = {
       body: SMS_CONFIRMATION,
     },
   ],
-};
-
-// ── Email Templates ────────────────────────────────────────────────────────
-
-export const EMAIL_CONFIRMATION = {
-  subject: "You're registered! Here's your webinar info 🎉",
-  body: `Hi {{contact.firstName}},
-
-You're officially registered for the webinar!
-
-📅 Date: {{custom.ez_webinar_date}}
-🔗 Your personal join link: {{custom.ez_zoom_join_link}}
-
-Add it to your calendar so you don't miss it:
-[Add to Google Calendar] [Add to Outlook]
-
-We're so excited to have you join us. In this webinar you'll learn:
-• [Key learning point 1]
-• [Key learning point 2]
-• [Key learning point 3]
-
-See you there!
-
-[Your Name / Brand]
-[Unsubscribe]`,
-};
-
-// ── SMS Templates ──────────────────────────────────────────────────────────
-
-export const SMS_CONFIRMATION = {
-  body: `Hey {{contact.firstName}}! You're registered 🎉 Webinar on {{custom.ez_webinar_date}}. Your join link: {{custom.ez_zoom_join_link}} – Reply STOP to unsubscribe.`,
 };
 
 export function printBlueprint(log) {
