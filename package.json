@@ -1,0 +1,19 @@
+{
+  "name": "ez-ghl-webinar-automation",
+  "version": "1.0.0",
+  "description": "EZ Webinar & Paid Course Automation for GoHighLevel",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "setup:all": "node src/index.js --all",
+    "setup:pipeline": "node src/index.js --pipeline",
+    "setup:fields": "node src/index.js --fields",
+    "setup:workflows": "node src/index.js --workflows"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "dotenv": "^16.3.1",
+    "chalk": "^5.3.0"
+  }
+}
