@@ -46,7 +46,6 @@ export async function setupCustomFields(log) {
       fieldKey: field.key,
       dataType: field.dataType,
       position: field.position,
-      locationId: ghl.locationId,
     });
 
     const fieldId = result?.customField?.id || result?.id;
