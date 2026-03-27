@@ -103,7 +103,7 @@ doc.fontSize(10).fillColor('#aaaaaa').font('Helvetica')
 
 const summaryItems = [
   '5 Automated Workflows',
-  '18 Email Templates',
+  '19 Email Templates',
   '9 SMS Templates',
   '1 Pipeline · 2 Custom Fields · 6 Tags',
 ];
@@ -228,14 +228,16 @@ doc.fontSize(10).fillColor(C.grey).font('Helvetica-Bold').text('TRIGGER: ', { co
 doc.moveDown(0.3);
 step(1,  'Wait until 3 days before [EZ-008] Webinar Date at 10:00 AM (contact time zone)', 'Use "Wait until date" and reference [EZ-008], subtract 3 days');
 step(2,  'Send Email: [EZ-EMAIL-02] 3 Days Before Reminder');
-step(3,  'Wait until 1 day before [EZ-008] Webinar Date at 9:00 AM');
-step(4,  'Send Email: [EZ-EMAIL-03] 1 Day Before Reminder');
-step(5,  'Send SMS:   [EZ-SMS-02]  1 Day Before Reminder');
-step(6,  'Wait until 1 hour before [EZ-008] Webinar Date');
-step(7,  'Send Email: [EZ-EMAIL-04] 1 Hour Before Reminder');
-step(8,  'Send SMS:   [EZ-SMS-03]  1 Hour Before Reminder');
-step(9,  'Wait 45 minutes (= 15 min before webinar)');
-step(10, 'Send SMS:   [EZ-SMS-04]  15 Minutes Before');
+step(3,  'Wait until 2 days before [EZ-008] Webinar Date at 9:00 AM');
+step(4,  'Send Email: [EZ-EMAIL-02B] 2 Days Before Reminder');
+step(5,  'Wait until 1 day before [EZ-008] Webinar Date at 9:00 AM');
+step(6,  'Send Email: [EZ-EMAIL-03] 1 Day Before Reminder');
+step(7,  'Send SMS:   [EZ-SMS-02]  1 Day Before Reminder');
+step(8,  'Wait until 1 hour before [EZ-008] Webinar Date');
+step(9,  'Send Email: [EZ-EMAIL-04] 1 Hour Before Reminder');
+step(10, 'Send SMS:   [EZ-SMS-03]  1 Hour Before Reminder');
+step(11, 'Wait 45 minutes (= 15 min before webinar)');
+step(12, 'Send SMS:   [EZ-SMS-04]  15 Minutes Before');
 
 // ═══════════════════════════════════════════════════════════════════════════
 // PAGE 5 – WF-003
@@ -259,22 +261,22 @@ step(6, 'Move Opportunity Stage → Offer Sent');
 step(7, 'Send Email: [EZ-EMAIL-06] Offer Day 1');
 step(8, 'Send SMS:   [EZ-SMS-05]  Offer Day 1');
 
-doc.moveDown(0.3).fontSize(10).fillColor(C.orange).font('Helvetica-Bold').text('▶  +48h – Day 3 Value');
-step(9,  'Wait 48 hours');
-step(10, 'Send Email: [EZ-EMAIL-07] Offer Day 3');
+doc.moveDown(0.3).fontSize(10).fillColor(C.orange).font('Helvetica-Bold').text('▶  +24h – Day 2 FAQ / Unlock Potential');
+step(9,  'Wait 24 hours');
+step(10, 'Send Email: [EZ-EMAIL-07] Offer Day 2');
 
-doc.moveDown(0.3).fontSize(10).fillColor(C.orange).font('Helvetica-Bold').text('▶  +48h – Day 5 Social Proof');
-step(11, 'Wait 48 hours');
-step(12, 'Send Email: [EZ-EMAIL-08] Offer Day 5');
-step(13, 'Send SMS:   [EZ-SMS-06]  Offer Day 5');
+doc.moveDown(0.3).fontSize(10).fillColor(C.orange).font('Helvetica-Bold').text('▶  +24h – Day 3 Urgency / Offer Closing Soon');
+step(11, 'Wait 24 hours');
+step(12, 'Send Email: [EZ-EMAIL-08] Offer Day 3');
+step(13, 'Send SMS:   [EZ-SMS-06]  Offer Day 3');
 
-doc.moveDown(0.3).fontSize(10).fillColor(C.orange).font('Helvetica-Bold').text('▶  +24h – Day 6 Urgency');
+doc.moveDown(0.3).fontSize(10).fillColor(C.orange).font('Helvetica-Bold').text('▶  +24h – Day 4 Morning: Last Call');
 step(14, 'Wait 24 hours');
-step(15, 'Send Email: [EZ-EMAIL-09] Urgency – Offer Closes Tomorrow');
+step(15, 'Send Email: [EZ-EMAIL-09] Last Call – Morning');
 
-doc.moveDown(0.3).fontSize(10).fillColor(C.orange).font('Helvetica-Bold').text('▶  +24h – Day 7 Last Chance');
-step(16, 'Wait 24 hours');
-step(17, 'Send Email: [EZ-EMAIL-10] Last Chance (Attended)');
+doc.moveDown(0.3).fontSize(10).fillColor(C.orange).font('Helvetica-Bold').text('▶  +8h – Day 4 Evening: Final Chance (same day)');
+step(16, 'Wait 8 hours');
+step(17, 'Send Email: [EZ-EMAIL-10] Last Chance – Evening');
 step(18, 'Send SMS:   [EZ-SMS-07]  Last Chance (Attended)');
 
 // ═══════════════════════════════════════════════════════════════════════════
@@ -407,152 +409,283 @@ divider();
 
 const emails = [
   {
-    id: '[EZ-EMAIL-01]', name: 'Webinar Confirmation',
-    subject: "You're registered! Here's your webinar info",
-    body: `Hi {{contact.firstName}},
+    id: '[EZ-EMAIL-01]', name: 'Webinar Confirmation (Double Opt-in)',
+    subject: "Confirm Your Registration for Our Upcoming Webinar!",
+    body: `Dear [Parent's Name],
 
-You're officially registered for the webinar!
+Thank you for signing up for our webinar titled "5 Biggest Fears Parents Face Sending Their Child to College." We are excited to have you join us on February 5, 2026, at 6:00 PM ET.
 
-Date: {{custom.ez_webinar_date}}
-Your personal join link: {{custom.ez_zoom_join_link}}
+Before we can confirm your registration, we need you to verify your email address. This helps us ensure that you receive all the important details and updates regarding the webinar.
 
-Add it to your calendar so you don't miss it.
+[Click here to verify your email!]
 
-We're so excited to have you join us. In this webinar you'll learn:
-• [Key learning point 1]
-• [Key learning point 2]
-• [Key learning point 3]
+In this exclusive webinar, you will discover how to eliminate your biggest fears and set your child up for success as they transition to college. Here's a sneak peek of what you can expect:
+• Understand the Full Picture: Gain clarity on parent perceptions of college readiness.
+• Effective Academic Strategies: Discover powerful techniques that boost your student's learning.
+• Beyond Academics: Prepare your child socially and emotionally for college life.
+• Navigating Transition Concerns: Tackle fears regarding academics and emotional stability.
+• Career Readiness: Equip your child with essential skills for their future career.
 
-See you there!
-[Your Name / Brand]`
+Don't miss out on this opportunity to empower both you and your child!
+We look forward to having you with us on this journey to transform anxiety into action.
+
+Sincerely,
+Debbie Elder
+
+P.S. Don't forget to verify your email to secure your spot for the webinar!`
   },
   {
     id: '[EZ-EMAIL-02]', name: '3 Days Before Reminder',
-    subject: "Your webinar is in 3 days – here's what to expect",
-    body: `Hi {{contact.firstName}},
+    subject: "You Signed Up for 5 Biggest Fears Parents Face Sending Their Child to College – Here's Why You Don't Want to Miss It!",
+    body: `Dear [Recipient's Name],
 
-Just a reminder — you're registered for the webinar in 3 days!
+Time flies, and as the date approaches, it's essential to remember why you signed up for the upcoming webinar: "5 Biggest Fears Parents Face Sending Their Child to College." This isn't just another online event; it's a game-changer for parents like you who are navigating the complexities of preparing their teens for college.
 
-Date: {{custom.ez_webinar_date}}
-Your join link: {{custom.ez_zoom_join_link}}
+Here's what you can look forward to on February 5, 2026, at 6:00 PM ET:
+• Identify key gaps: Learn about the critical gaps in addressing your child's transition to college.
+• Empower your student: Discover powerful learning skills that set the stage for academic success now and in the future.
+• Unlock potential: Equip yourself with strategies to ensure your child gets the most out of their college experience.
 
-We recommend joining 5 minutes early to make sure your audio and video are working.
+As a parent of a college-bound high school student, you may be feeling these pressing concerns:
+• Is my child ready for college and a career?
+• What steps should I take beyond academics to prepare them?
+• How can I alleviate my worries about costs, social-emotional readiness, and their future careers?
 
-See you soon!
-[Your Name / Brand]`
+All of these questions will be answered during the webinar, tailored specifically for parents seeking to empower their children.
+
+Key takeaways include:
+• Understanding the parent perceptions of readiness for college and careers.
+• Addressing academic readiness and college preparation beyond just academics.
+• Navigating concerns related to social/emotional transitions and career readiness.
+
+Join us live! [Register Here]
+
+Best,
+Debbie Elder
+
+P.S. Take action now! Secure your spot so you don't miss out on essential insights that could shape your child's academic future.`
+  },
+  {
+    id: '[EZ-EMAIL-02B]', name: '2 Days Before Reminder',
+    subject: "Unlock Your Child's College Success!",
+    body: `Dear [Registrant's Name],
+
+Are you worried about your child's transition to college? You're not alone. Many parents share the same concerns, but attending our upcoming webinar, "5 Biggest Fears Parents Face Sending Their Child to College," can provide you with game-changing insights.
+
+Join us live on February 5, 2026, at 6:00 PM ET. Here's why showing up live is crucial:
+
+1. Direct Access to Expert Advice: Real-time guidance from years of experience as an internationally recognized coach and consultant in college readiness.
+2. Actionable Strategies: Practical steps you can implement immediately to prepare your student for academic success.
+3. Understanding Readiness: Essential insights into how to assess your child's academic and emotional readiness for college.
+4. Communication Skills: How to discuss college expectations with your child to foster open communication.
+5. Networking with Other Parents: Hear from other parents navigating the same journey.
+
+Don't let this opportunity slip away! [Join the Webinar]
+
+Best,
+Debbie Elder
+
+P.S. If you truly want to empower your student and give them the best chance at college success, you cannot afford to miss this live session. Register now!`
   },
   {
     id: '[EZ-EMAIL-03]', name: '1 Day Before Reminder',
-    subject: 'Tomorrow! Your webinar link is inside',
-    body: `Hi {{contact.firstName}},
+    subject: "Tomorrow's the Big Day! Here's Why You Need to Show Up",
+    body: `Hi there,
 
-Tomorrow is the big day! We're going live and we'd love to see you there.
+Tomorrow is the day you've been waiting for! If you want to empower your child for both academic and college success, you need to be present for our webinar: "5 Biggest Fears Parents Face Sending Their Child to College."
 
-Date: {{custom.ez_webinar_date}}
-Your personal join link: {{custom.ez_zoom_join_link}}
+Date: February 5, 2026  |  Time: 6:00 PM ET
 
-Pro tip: Add this link to your calendar now so it's easy to find tomorrow.
+Why attend live? Direct access to actionable insights — get answers to your pressing questions and hear exclusive content only discussed in the moment.
 
-[Your Name / Brand]`
+What you'll gain:
+1. Understand Readiness: Explore parent perceptions around college readiness.
+2. Academic Excellence: Discover essential learning skills that empower students to excel.
+3. Holistic Preparation: Learn how social, emotional, and career-related concerns play a role.
+4. Addressing Concerns: Dive deep into academic values and completion rate worries.
+5. Expert Guidance: Proven strategies from a seasoned consultant, author, and speaker.
+
+Join us live: [Join Webinar]
+
+Best,
+Debbie Elder
+
+P.S. Being live means not just gaining wisdom but connecting with a community of parents who share your concerns.`
   },
   {
     id: '[EZ-EMAIL-04]', name: '1 Hour Before Reminder',
-    subject: 'We go live in 1 hour – join link inside',
-    body: `Hi {{contact.firstName}},
+    subject: "1 Hour to Go! Drop Everything and Show Up!",
+    body: `Dear Parent,
 
-In just ONE HOUR we go live. Don't miss it!
+This is your final reminder! In just one hour, we'll dive into the 5 Biggest Fears Parents Face Sending Their Child to College. Don't miss out on vital insights that can shape your child's college experience!
 
-Click here to join: {{custom.ez_zoom_join_link}}
+Here's what you'll discover with me, Debbie Elder:
+1. Current Parent Concerns: Understand common perceptions of readiness for college and careers.
+2. Academic Preparedness: Learn what truly prepares your student for college-level work.
+3. Holistic College Prep: Discover strategies that go beyond academics.
+4. Value and Completion: Tackle questions around the true cost versus the value of college education.
+5. Social/Emotional Readiness: Equip yourself with tools to support your child's emotional journey.
 
-We'll be starting right on time, so grab your seat early.
+Join us TONIGHT at 6:00 PM ET: [Join Webinar Now!]
 
-[Your Name / Brand]`
+Best,
+Debbie Elder
+
+P.S. Remember, it's just an hour away. Prepare to take notes!`
   },
   {
     id: '[EZ-EMAIL-05]', name: 'Replay + Thank You (Attended)',
-    subject: "Thank you for joining! Here's your replay",
-    body: `Hi {{contact.firstName}},
+    subject: "Here's the Replay!",
+    body: `Dear Parents,
 
-Thank you so much for joining the webinar — it was amazing having you there!
+Thank you for joining me for the "5 Biggest Fears Parents Face Sending Their Child to College" webinar last night. I appreciate your commitment to ensuring your child's success during this critical transition.
 
-Here's the replay: [REPLAY LINK HERE]
-(Available for [X days])
+[Watch the Replay Here!] — This session is packed with vital insights. Remember, this valuable replay won't be available forever.
 
-During the webinar I mentioned something special for attendees — keep an eye on your inbox over the next 24 hours.
+Why Did This Webinar Matter? Our discussion covered crucial topics like:
+• Understanding your child's perceived readiness for college and careers.
+• Assessing academic readiness and the essential preparation that goes beyond just grades.
+• Addressing concerns related to social and emotional transitions.
+• Tackling career-related anxieties that both you and your student may experience.
 
-Thanks again,
-[Your Name / Brand]`
+Your Journey to Empowerment Begins Here — I urge you to consider participating in my 6-week Virtual College Success Course (total value: $3,497, includes College Prep Masterclass Series valued at $2,997).
+
+[click here to find out more about the course and secure your spot today!]
+
+Best regards,
+Debbie Elder
+
+P.S. Watching the replay today could make all the difference! Don't let this opportunity slip away.`
   },
   {
-    id: '[EZ-EMAIL-06]', name: 'Offer Day 1 (Attended)',
-    subject: 'Special offer for webinar attendees (expires soon)',
-    body: `Hi {{contact.firstName}},
+    id: '[EZ-EMAIL-06]', name: 'Offer Day 1 (Attended) – Replay + Course',
+    subject: "Replay + How 6-Week Course Empowers Your Student",
+    body: `Dear Parents,
 
-As promised, here's your exclusive attendee offer for [COURSE NAME].
+Did you know that nearly 70% of students entering college feel unprepared for the transition? If you missed our webinar, the replay is now available — watch it while you still can.
 
-[COURSE NAME] gives you:
-• [Benefit 1]
-• [Benefit 2]
-• [Benefit 3]
+Key takeaways from the session:
+1. Understanding Readiness: Gauge your child's readiness for college and careers.
+2. Academic Preparation: Vital skills and practices that enhance your student's academic outcomes.
+3. Navigating Beyond Academics: Social and emotional elements crucial for a smooth transition.
+4. Career-Related Insights: What's needed to prepare your child for their future career path.
+5. Peace of Mind: How proper preparation leads to confidence for both you and your student.
 
-Get instant access: [OFFER LINK]
+Enroll in my 6-week Virtual College Success Course (total value: $3,497, includes College Prep Masterclass Series — a $2,997 value). Check out the course details and grab your spot now: [targeturl]
 
-This offer expires in [X days].
+Best,
+Debbie Elder
 
-[Your Name / Brand]`
+P.S. The replay will only be available for a limited time — watch it now and explore how our course can make a real difference. [replay link]`
   },
   {
-    id: '[EZ-EMAIL-07]', name: 'Offer Day 3 (Attended)',
-    subject: "Still thinking about it? Read this.",
-    body: `Hi {{contact.firstName}},
+    id: '[EZ-EMAIL-07]', name: 'Offer Day 2 (Attended) – FAQ / Unlock Potential',
+    subject: "Don't Miss Out: Unlock Your Student's True Potential",
+    body: `Hi there,
 
-A few days ago I shared a special offer for [COURSE NAME] with you.
+Did you know that over 60% of students feel unprepared for the challenges of college? That statistic is alarming, and it underscores the urgent need for effective college preparation strategies.
 
-Here's what's inside:
-[Module 1] / [Module 2] / [Module 3]
+Key insights from the webinar:
+1. Understanding Readiness: Gauge whether your child is truly prepared for college responsibilities.
+2. Beyond Academics: Essential non-academic skills that are just as crucial to college success.
+3. Addressing Concerns: Tackle fears related to value, completion, and emotional readiness.
+4. Empowering Your Child: Tools they'll need to excel academically and socially on campus.
+5. Strategizing for Success: Create a strategic plan tailored to your child's collegiate goals.
 
-"[Testimonial 1]" – [Name]
+Watch the replay and explore the 6-week Virtual College Success Course at [targeturl].
 
-Claim your spot: [OFFER LINK]  (Offer closes [DATE])
+Why should you enroll?
+• Unlock your child's potential without adding stress.
+• Get peace of mind knowing they're fully prepared for academic success.
+• Avoid the long learning curves: Learn 100% faster with great retention.
+• Define clear collegiate goals and implement plans without the struggle.
 
-[Your Name / Brand]`
+[Click here to learn more and secure your spot today!]
+
+Best,
+Debbie Elder
+
+P.S. Don't wait to give your child the tools they need to succeed. Enroll in the 6-week Virtual College Success Course now!`
   },
   {
-    id: '[EZ-EMAIL-08]', name: 'Offer Day 5 (Attended)',
-    subject: 'Real results from real students',
-    body: `Hi {{contact.firstName}},
+    id: '[EZ-EMAIL-08]', name: 'Offer Day 3 (Attended) – Urgency',
+    subject: "Time Is Running Out – Replay & Offer Closing Soon!",
+    body: `Dear Parents,
 
-[Student Name] went from [before] to [after result] in just [timeframe].
+Last week, we held an insightful webinar titled, "5 Biggest Fears Parents Face Sending Their Child to College." The purpose was to expose critical gaps in preparing for your child's transition to college.
 
-You can get the same results: [OFFER LINK]
+Key takeaways:
+1. Understanding Readiness: Insight into common parent perceptions and how to address them.
+2. Academic Preparation Beyond Just Grades: Prepare your child academically, socially, and emotionally.
+3. Navigating Costs and Value: Tackle critical concerns surrounding college expenses and graduation value.
+4. Career Preparedness: Essential career skills that need to be developed prior to college enrollment.
+5. Successful Transitions: Practical advice on easing the high school to college transition.
 
-Offer ends [DATE].
+The replay is available, but only for a limited time, and so is my exclusive offer for the 6-week Virtual College Success Course. This offer is set to expire tomorrow, Monday, 02/09/2026.
 
-[Your Name / Brand]`
+The value of this offer is substantial:
+• The College Prep Masterclass Series valued at $2,997.00.
+• All included in the 6-week Virtual College Success Course.
+
+Click [here] to watch the webinar replay and secure your spot in the course.
+
+Warm regards,
+Debbie Elder
+
+P.S. Time is running out! Make sure to take advantage of this unique opportunity before it's too late!`
   },
   {
-    id: '[EZ-EMAIL-09]', name: 'Urgency – Offer Closes Tomorrow',
-    subject: 'Offer closes TOMORROW – don\'t miss it',
-    body: `Hi {{contact.firstName}},
+    id: '[EZ-EMAIL-09]', name: 'Last Call – Morning (Day 4)',
+    subject: "Last Call - Replay and Offer Closing Today!",
+    body: `Dear [Recipient's Name],
 
-The special offer for [COURSE NAME] closes TOMORROW.
+This is your last chance to watch the replay of my webinar, 5 Biggest Fears Parents Face Sending Their Child to College, held on February 5, 2026, at 6:00 PM ET.
 
-Get access before it's gone: [OFFER LINK]
+Key takeaways from the webinar:
+1. Parent perceptions of readiness: How parents view their child's preparedness, and what that means for success.
+2. Social/emotional transition concerns: Challenges students face adapting to a college environment.
+3. Career-related concerns: Aligning your child's education with career aspirations.
 
-This is your last real chance to get in at this price.
+Don't miss the opportunity to unlock your child's potential with the 6-week Virtual College Success Course. It includes:
+• The College Prep Masterclass Series valued at $2,997.00 — to equip your student with self-leadership skills.
+• Strategies to make the transition to college smoother and create clear collegiate goals.
 
-[Your Name / Brand]`
+Total value: $3,497.00. This offer closes tonight at midnight, Monday, February 9, 2026.
+
+[Watch the Replay and Learn More About the Course]
+
+To your child's success,
+Debbie Elder
+
+P.S. This is your final call! Secure your place today. 🌟`
   },
   {
-    id: '[EZ-EMAIL-10]', name: 'Last Chance (Attended)',
-    subject: 'LAST CHANCE – offer closes today',
-    body: `Hi {{contact.firstName}},
+    id: '[EZ-EMAIL-10]', name: 'Last Chance – Evening (Day 4)',
+    subject: "Last Chance: Course Offer Ends Tonight!",
+    body: `Dear [Recipient's Name],
 
-Today is the LAST DAY to get [COURSE NAME] at this special price. At midnight, this offer disappears.
+This is it! Tonight is your last opportunity to join the 6-week Virtual College Success Course.
 
-Join now: [OFFER LINK]
+Here's what we covered in the webinar:
+1. Academic Readiness: Understanding what college expects from your child academically.
+2. Social and Emotional Preparation: Tips to support your child's emotional transition.
+3. Career-Related Concerns: How to help your student choose the right path.
+4. Navigating Financial Considerations: Strategies to afford college without overwhelming debt.
+5. Unlocking Your Child's Potential: Practical tools to inspire motivation and self-leadership.
 
-[Your Name / Brand]`
+Special Offer: Sign up before midnight tonight! This exclusive program includes the College Prep Masterclass Series—a $2,997.00 value—totaling $3,497.00 in invaluable benefits.
+
+By enrolling, you will:
+• Gain the knowledge to help your child succeed academically and socially.
+• Conquer the fears and uncertainties surrounding the college journey.
+• Develop actionable goals and a step-by-step strategy tailored for your student's needs.
+
+The hard deadline is tonight at midnight, February 9, 2026.
+
+Best,
+Debbie Elder
+
+P.S. This is your final reminder—don't wait! Take the next step towards a successful college journey for your child.`
   },
   {
     id: '[EZ-EMAIL-11]', name: 'Sorry We Missed You + Replay (No-Show)',
@@ -756,7 +889,7 @@ const checklistSections = [
     ]
   },
   {
-    title: 'Email Templates (GHL → Marketing → Email Templates)',
+    title: 'Email Templates (GHL → Marketing → Email Templates)  [19 total]',
     items: emails.map(e => `${e.id}  ${e.name}`),
   },
   {
