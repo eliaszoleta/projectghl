@@ -102,8 +102,8 @@ doc.fontSize(10).fillColor('#aaaaaa').font('Helvetica')
    .moveDown(3);
 
 const summaryItems = [
-  '5 Automated Workflows',
-  '19 Email Templates',
+  '6 Workflows / Campaigns',
+  '28 Email Templates (9 Promo + 19 Automation)',
   '9 SMS Templates',
   '1 Pipeline · 2 Custom Fields · 6 Tags',
 ];
@@ -128,16 +128,19 @@ const toc = [
   ['',   '1.1  Pipeline: [EZ-006] Webinar Pipeline', '3'],
   ['',   '1.2  Custom Fields', '3'],
   ['',   '1.3  Tags', '3'],
-  ['2.', 'Phase 2 – Workflow Blueprints', '4'],
-  ['',   '[EZ-001]  Webinar Registration', '4'],
-  ['',   '[EZ-002]  Webinar Reminder Sequence', '4'],
-  ['',   '[EZ-003]  Post-Webinar – Attended', '5'],
-  ['',   '[EZ-004]  Post-Webinar – No-Show', '6'],
-  ['',   '[EZ-005]  Purchase & Membership Access', '7'],
-  ['3.', 'Phase 3 – Manual Setup Steps', '8'],
-  ['4.', 'Email Templates (Full Copy)', '9'],
-  ['5.', 'SMS Templates (Full Copy)', '14'],
-  ['6.', 'Complete Asset Checklist', '15'],
+  ['2.', 'Phase 2 – Promo Email Campaign (Pre-Registration)', '4'],
+  ['',   '[EZ-000]  Webinar Promo Campaign (9 Broadcast Emails)', '4'],
+  ['3.', 'Phase 3 – Workflow Blueprints (Post-Registration)', '5'],
+  ['',   '[EZ-001]  Webinar Registration', '5'],
+  ['',   '[EZ-002]  Webinar Reminder Sequence', '5'],
+  ['',   '[EZ-003]  Post-Webinar – Attended', '6'],
+  ['',   '[EZ-004]  Post-Webinar – No-Show', '7'],
+  ['',   '[EZ-005]  Purchase & Membership Access', '8'],
+  ['4.', 'Phase 4 – Manual Setup Steps', '9'],
+  ['5.', 'Promo Email Templates (Full Copy)', '10'],
+  ['6.', 'Automation Email Templates (Full Copy)', '13'],
+  ['7.', 'SMS Templates (Full Copy)', '18'],
+  ['8.', 'Complete Asset Checklist', '19'],
 ];
 
 toc.forEach(([num, title, pg]) => {
@@ -201,10 +204,56 @@ tags.forEach(([t, desc]) => {
 });
 
 // ═══════════════════════════════════════════════════════════════════════════
-// PAGE 4 – WORKFLOWS
+// PAGE 4 – PROMO EMAIL CAMPAIGN
 // ═══════════════════════════════════════════════════════════════════════════
 doc.addPage();
-h1('Phase 2 – Workflow Blueprints');
+h1('Phase 2 – Promo Email Campaign (Pre-Registration)');
+body('These 9 emails are sent to your existing list BEFORE the webinar to drive sign-ups.\nThey are NOT part of the post-registration automation — they are broadcast/campaign emails.');
+divider();
+
+sectionBox('[EZ-000]  Webinar Promo Campaign');
+doc.fontSize(10).fillColor(C.grey).font('Helvetica-Bold').text('METHOD: ', { continued: true })
+   .fillColor(C.black).font('Helvetica').text('GHL Email Campaigns  (Marketing → Emails → New Campaign)');
+doc.fontSize(10).fillColor(C.grey).font('Helvetica-Bold').text('TARGET: ', { continued: true })
+   .fillColor(C.black).font('Helvetica').text('Contacts tagged with  ez_promo-list');
+doc.moveDown(0.4);
+
+doc.fontSize(10).fillColor(C.orange).font('Helvetica-Bold').text('How to set up in GHL:');
+doc.fontSize(10).fillColor(C.black).font('Helvetica')
+   .text('1. Go to Marketing → Emails → New Campaign', { lineGap: 3 })
+   .text('2. Create one campaign per email below, scheduled on the specified date', { lineGap: 3 })
+   .text('3. Set the recipient filter to: Tag = ez_promo-list', { lineGap: 3 })
+   .text('4. Exclude contacts who already have tag: ez_webinar-registered', { lineGap: 3 });
+doc.moveDown(0.4);
+
+const promoSchedule = [
+  ['EZ-PROMO-01', 'Thu 01/29/2026', 'T-7', 'Unlock the 5 Biggest Fears Parents Face About College 🌟'],
+  ['EZ-PROMO-02', 'Fri 01/30/2026', 'T-6', 'Why Most Parents Struggle with College'],
+  ['EZ-PROMO-03', 'Sat 01/31/2026', 'T-5', 'What If You Could Provide the Best Preparation...'],
+  ['EZ-PROMO-04', 'Sun 02/01/2026', 'T-4', 'Can You Really Empower Your Student for Success?'],
+  ['EZ-PROMO-05', 'Mon 02/02/2026', 'T-3', "You Won't Believe What I'm Sharing LIVE…"],
+  ['EZ-PROMO-06', 'Tue 02/03/2026', 'T-2', '48 Hours Left: This Could Change Everything for You'],
+  ['EZ-PROMO-07', 'Wed 02/04/2026', 'T-1', "It's Tomorrow! Don't Miss Your Chance!"],
+  ['EZ-PROMO-08', 'Thu 02/05/2026 AM', 'T-0', "It's Happening Today! Get Ready to Empower Your Student"],
+  ['EZ-PROMO-09', 'Thu 02/05/2026 -1hr', 'T-0', "Final Call: We're Live in 1 Hour!"],
+];
+
+promoSchedule.forEach(([id, date, countdown, subject]) => {
+  doc.fontSize(10).fillColor(C.accent).font('Helvetica-Bold').text(`[${id}]`, { continued: true })
+     .fillColor(C.green).font('Helvetica-Bold').text(`  ${countdown}  `, { continued: true })
+     .fillColor(C.grey).font('Helvetica').text(`${date}`, { continued: true })
+     .fillColor(C.black).font('Helvetica').text(`  –  ${subject}`, { lineGap: 4 });
+});
+
+doc.moveDown(0.4);
+doc.fontSize(9).fillColor(C.grey).font('Helvetica-Oblique')
+   .text('Note: Full email copy for all 9 promo emails is in the "Promo Email Templates" section of this document.', { lineGap: 2 });
+
+// ═══════════════════════════════════════════════════════════════════════════
+// PAGE 5 – WORKFLOWS
+// ═══════════════════════════════════════════════════════════════════════════
+doc.addPage();
+h1('Phase 3 – Workflow Blueprints (Post-Registration)');
 body('GHL does not support creating workflows via API. Build each workflow in:\nGHL → Automations → Workflows → + New Workflow');
 divider();
 
@@ -400,10 +449,260 @@ manualSteps.forEach(({ num, title, items }) => {
 });
 
 // ═══════════════════════════════════════════════════════════════════════════
-// PAGE 8+ – EMAIL TEMPLATES
+// PROMO EMAIL TEMPLATES – FULL COPY
 // ═══════════════════════════════════════════════════════════════════════════
 doc.addPage();
-h1('Email Templates – Full Copy');
+h1('Promo Email Templates – Full Copy');
+body('9 pre-registration broadcast emails. Use in GHL → Marketing → Emails → New Campaign.\nSend to contacts tagged ez_promo-list, excluding those already tagged ez_webinar-registered.');
+divider();
+
+const promoEmails = [
+  {
+    id: '[EZ-PROMO-01]', name: 'Webinar Promo – T-7 Day', send: 'Thursday, January 29, 2026',
+    subject: 'Unlock the 5 Biggest Fears Parents Face About College 🌟',
+    body: `Dear Parent,
+
+Are you feeling overwhelmed as your high school student prepares for college? You're not alone. Parents face many fears about their child's transition to college. But what if you could unlock the answers to those fears and empower your student for both academic and future career success?
+
+Join me for an essential webinar titled "5 Biggest Fears Parents Face Sending Their Child to College" on February 5, 2026, at 6:00 PM ET.
+
+In this webinar, you will discover:
+• Parent perceptions of college readiness: Understand what assumptions might be clouding your view.
+• Academic readiness: Learn how to assess and enhance your child's academic skills.
+• Preparation beyond academics: Discover why life skills are equally important and how to cultivate them.
+• Addressing completion concerns: Gain insights into the metrics behind successful college graduation.
+• Social and emotional transition challenges: Learn how to support your child's mental well-being during this significant life change.
+
+My name is Debbie Elder, an internationally recognized innovator and best-selling author dedicated to motivating students to peak performance.
+
+Are you ready to tackle those fears head-on? Click [here to register now] and secure your spot. Don't wait—spaces are limited, and your child's future success is too important to delay.
+
+Best,
+Debbie Elder
+
+P.S. Remember, empowering your student starts with understanding their needs. Register now to ensure they get the best preparation for college!`
+  },
+  {
+    id: '[EZ-PROMO-02]', name: 'Webinar Promo – T-6 Day', send: 'Friday, January 30, 2026',
+    subject: 'Why Most Parents Struggle with College',
+    body: `Hi there,
+
+As a parent of a college-bound high school student, you might be grappling with these challenging questions: What do I need to do to get my student into an ideal college? The costs of a college education continue to rise, leaving many parents feeling overwhelmed by the perceived value versus the financial burden.
+
+But here's the good news: You don't have to navigate this journey alone.
+
+Join us for our upcoming webinar, "5 Biggest Fears Parents Face Sending Their Child to College," on February 5, 2026, at 6:00 PM ET.
+
+Here's what you can expect to learn during the webinar:
+• Understanding Parent Perceptions: Navigate what "readiness" for college truly means for your child.
+• Academic Readiness: Discover how to assess your child's academic preparedness for college-level work.
+• Beyond Academics: Learn about vital college preparation aspects that often get overlooked.
+• Value and Completion Concerns: Address common concerns about academic value and graduation rates.
+• Social and Emotional Support: Understand how to help your child transition successfully into college life.
+
+👉 Don't miss this opportunity! [Register now for the webinar!]
+
+Looking forward to seeing you there,
+Debbie Elder
+
+P.S. If you're still wondering whether your student is truly prepared for college, this webinar is your chance to find out! Sign up today.`
+  },
+  {
+    id: '[EZ-PROMO-03]', name: 'Webinar Promo – T-5 Day', send: 'Saturday, January 31, 2026',
+    subject: 'What If You Could Provide the Best Preparation for Your College-Bound Student?',
+    body: `Dear Parent,
+
+Imagine watching your child seamlessly transition to college, equipped with the skills not just to survive, but to thrive. Join us for our upcoming webinar, "5 Biggest Fears Parents Face Sending Their Child to College," where we'll outline the roadmap to empower your student for academic success and beyond.
+
+Why Attend? This webinar will help you:
+• Bridge the Gap: Address critical perceptions of academic and career readiness.
+• Empower Success: Learn effective skills to enhance your child's academic performance.
+• Prepare Holistically: Gain insights into social/emotional transitions and external pressures.
+• Navigate Concerns: Discuss academic value and completion strategies.
+
+About the Presenter: Debbie Elder — a trailblazer in student motivation and college preparation, best-selling author and highly sought-after speaker.
+
+What You Will Gain:
+1. Key perceptions of student readiness for college and careers.
+2. Strategies for addressing academic concerns and preparing your child holistically.
+3. Insights on social/emotional challenges and their impact on transition.
+4. How to effectively address career-related fears before your child steps onto campus.
+5. Concrete action plans for making college more affordable and accessible.
+
+Join us on February 5, 2026, at 6:00 PM ET. [Click here to register now!]
+
+Best,
+Debbie Elder
+
+P.S. Empower your child with the education they deserve. Secure your spot today!`
+  },
+  {
+    id: '[EZ-PROMO-04]', name: 'Webinar Promo – T-4 Day', send: 'Sunday, February 1, 2026',
+    subject: 'Can You Really Empower Your Student for Success?',
+    body: `Dear Parent,
+
+Many believe their child is already prepared for the rigors of college, but what if I told you that this assumption might be holding them back? The truth is, without the right guidance, even the brightest students can struggle during their transition to college.
+
+Join me on February 5, 2026, at 6:00 PM ET for an eye-opening webinar titled "5 Biggest Fears Parents Face Sending Their Child to College."
+
+Here's why you don't want to miss this:
+• Parent Perceptions: Understand common misconceptions about student readiness.
+• Academic Readiness: Learn what academic skills truly matter.
+• Beyond Academics: Explore essential preparations outside of standard coursework.
+• Address Completion Concerns: Discover how to ensure your child stays on track.
+• Social/Emotional Support: Gain insights into managing the emotional aspects of this transition.
+
+Don't let uncertainty hold your family back! Register now to secure your spot.
+
+👉 [Register Here for the Webinar]
+
+Best,
+Debbie Elder
+
+P.S. Remember, it's not just about getting into college—it's about ensuring your child thrives once they get there! Secure your spot today!`
+  },
+  {
+    id: '[EZ-PROMO-05]', name: 'Webinar Promo – T-3 Day', send: 'Monday, February 2, 2026',
+    subject: "You Won't Believe What I'm Sharing LIVE…",
+    body: `Hi there,
+
+With a new college season around the corner, the 5 Biggest Fears Parents Face Sending Their Child to College is an absolute must-attend event.
+
+Join Me LIVE on February 5, 2026 at 6:00 PM ET — [Register Here]
+
+You'll gain valuable insights into:
+• Parent perceptions of readiness: Are your expectations aligned with reality?
+• Academic readiness for college: The essential skills your child needs to thrive academically.
+• College preparation beyond academics: Factors like emotional intelligence that significantly influence college success.
+• Academic and value completion concerns: How to ensure your child maximizes their college investment.
+• Social/emotional transition concerns: Key strategies for helping your student adjust and thrive.
+• Career-related insights: How to guide your child in their career exploration.
+
+Don't let your fears hold your child back! Click [here] to secure your spot.
+
+Looking forward to seeing you there,
+Debbie Elder
+
+PS: The insights I'll share are exclusive to this webinar. Webinar Date & Time: February 5, 2026, 6:00 PM ET. [Register Now!]`
+  },
+  {
+    id: '[EZ-PROMO-06]', name: 'Webinar Promo – T-2 Day', send: 'Tuesday, February 3, 2026',
+    subject: '48 Hours Left: This Could Change Everything for You',
+    body: `Dear Parents,
+
+Only 48 hours left until our groundbreaking webinar, 5 Biggest Fears Parents Face Sending Their Child to College! Here's what we'll cover:
+
+• Parent perceptions of readiness for college and careers
+• Academic readiness and what your child truly needs
+• College preparation beyond academics – developing a well-rounded student
+• Concerns around academic value and completion – how to avoid pitfalls
+• Social/emotional transition challenges that need attention
+• Career-related worries parents often face, and how to tackle them
+
+I'm Debbie Elder, an internationally recognized innovator and best-selling author dedicated to motivating students toward peak performance.
+
+Secure your spot now and join us on February 5, 2026, at 6:00 PM ET. Register here: [Register Now]
+
+Time is running out – empower yourself and your child now!
+
+Best,
+Debbie Elder
+
+PS: Remember, this could change everything for you and your child. Reserve your place today!`
+  },
+  {
+    id: '[EZ-PROMO-07]', name: 'Webinar Promo – T-1 Day', send: 'Wednesday, February 4, 2026',
+    subject: "It's Tomorrow! Don't Miss Your Chance!",
+    body: `Dear Parent,
+
+Time is running out! The webinar you've been waiting for, "5 Biggest Fears Parents Face Sending Their Child to College," is just one day away!
+
+When: February 5, 2026  |  Time: 6:00 PM ET  |  Register now: [Join the Webinar]
+
+In our time together, you'll learn:
+• Parent perceptions of readiness: What you might be overlooking when assessing your child's preparedness.
+• Academic willingness: Critical academic readiness strategies that go beyond traditional academics.
+• Comprehensive preparation: Vital elements of college preparation, including social/emotional aspects and career readiness.
+• Concerns addressed: Transition issues and completion worries tackled head-on.
+
+Now, it's your turn to gain clarity and take action! Don't let uncertainty hold you back.
+
+Secure your spot today: [Register Here]
+
+Warm regards,
+Debbie Elder
+
+P.S. This is the last chance to attend this critical session—don't let it slip away! Click here to register now! [Join the Webinar]`
+  },
+  {
+    id: '[EZ-PROMO-08]', name: 'Webinar Promo – Day Of (Morning)', send: 'Thursday, February 5, 2026 – Morning',
+    subject: "It's Happening Today! Get Ready to Empower Your Student",
+    body: `Dear Parents,
+
+Today is the day! At 6:00 PM ET, I'll be diving into the 5 Biggest Fears Parents Face Sending Their Child to College in our live webinar.
+
+Why Attend Live? You'll have the opportunity to ask pressing questions in real-time and receive immediate guidance. You'll learn:
+• Parent Perceptions: Align your expectations with reality regarding your child's college readiness.
+• Academic Preparedness: Discover essential academic skills that influence college success.
+• Holistic College Preparation: Understand the non-academic aspects of preparing your child for college.
+• Combatting Common Concerns: Tackle worries about academic value, completion rates, and career prospects.
+• Unlocking Potential: Gain insight into ways you can support your child in maximizing their college journey.
+
+Join me today at 6:00 PM ET. [Click here to register and secure your spot now!]
+
+Best,
+Debbie Elder
+
+P.S. Don't miss this chance to learn how you can make a difference in their future!`
+  },
+  {
+    id: '[EZ-PROMO-09]', name: 'Webinar Promo – Day Of (1 Hr Before)', send: 'Thursday, February 5, 2026 – 1 Hour Before Webinar',
+    subject: "Final Call: We're Live in 1 Hour!",
+    body: `Dear Parent,
+
+In just 1 hour, we'll be going live with our transformative webinar, "5 Biggest Fears Parents Face Sending Their Child to College."
+
+Here's what we'll cover:
+• Parent perceptions of readiness for college & careers: What it really means for your child to be prepared.
+• Academic readiness for college: How to evaluate your child's skills and what gaps may need to be addressed.
+• College preparation beyond academics: Life skills and social competencies that matter just as much as grades.
+• Completion concerns: How to support your child's journey through their college experience.
+• Career-related concerns: How to align your child's education with their future career possibilities.
+
+By joining us today at 6:00 PM ET, you'll arm yourself with the knowledge and tools to transform those fears into confidence.
+
+👉 [Join the Webinar Now]
+
+Looking forward to seeing you shortly!
+
+Best,
+Debbie Elder
+
+P.S. This is your last opportunity to participate! Click [here] to join us now!`
+  },
+];
+
+promoEmails.forEach((email, i) => {
+  if (i > 0 && i % 3 === 0) doc.addPage();
+
+  doc.fontSize(11).fillColor(C.accent).font('Helvetica-Bold')
+     .text(`${email.id}  ${email.name}`);
+  doc.fontSize(9).fillColor(C.green).font('Helvetica-Bold').text('Send: ', { continued: true })
+     .fillColor(C.grey).font('Helvetica').text(email.send);
+  doc.fontSize(9).fillColor(C.grey).font('Helvetica-Bold').text('Subject: ', { continued: true })
+     .font('Helvetica').fillColor(C.black).text(email.subject);
+  doc.fontSize(9).fillColor(C.black).font('Helvetica')
+     .text(email.body, { lineGap: 1.5 });
+  doc.moveDown(0.5);
+  doc.moveTo(50, doc.y).lineTo(545, doc.y).strokeColor('#e0e0e0').lineWidth(0.5).stroke();
+  doc.moveDown(0.5);
+});
+
+// ═══════════════════════════════════════════════════════════════════════════
+// AUTOMATION EMAIL TEMPLATES – FULL COPY
+// ═══════════════════════════════════════════════════════════════════════════
+doc.addPage();
+h1('Automation Email Templates – Full Copy');
 body('Create each template in GHL → Marketing → Email Templates.');
 divider();
 
@@ -879,6 +1178,10 @@ const checklistSections = [
     ]
   },
   {
+    title: 'Promo Email Campaign (GHL → Marketing → Emails → New Campaign)',
+    items: promoEmails.map(e => `${e.id}  ${e.name}  |  Send: ${e.send}`),
+  },
+  {
     title: 'Workflows (build manually in GHL UI)',
     items: [
       '[EZ-001] Webinar Registration Workflow',
@@ -889,7 +1192,7 @@ const checklistSections = [
     ]
   },
   {
-    title: 'Email Templates (GHL → Marketing → Email Templates)  [19 total]',
+    title: 'Automation Email Templates (GHL → Marketing → Email Templates)  [19 total]',
     items: emails.map(e => `${e.id}  ${e.name}`),
   },
   {
