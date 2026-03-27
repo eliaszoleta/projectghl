@@ -9,26 +9,31 @@
 // ── Email Templates ────────────────────────────────────────────────────────
 
 export const EMAIL_CONFIRMATION = {
-  subject: "You're registered! Here's your webinar info 🎉",
-  body: `Hi {{contact.firstName}},
+  subject: "Confirm Your Registration for Our Upcoming Webinar!",
+  body: `Dear [Parent's Name],
 
-You're officially registered for the webinar!
+Thank you for signing up for our webinar titled "5 Biggest Fears Parents Face Sending Their Child to College." We are excited to have you join us on February 5, 2026, at 6:00 PM ET.
 
-📅 Date: {{custom.ez_webinar_date}}
-🔗 Your personal join link: {{custom.ez_zoom_join_link}}
+Before we can confirm your registration, we need you to verify your email address. This helps us ensure that you receive all the important details and updates regarding the webinar.
 
-Add it to your calendar so you don't miss it:
-[Add to Google Calendar] [Add to Outlook]
+[Click here to verify your email!](#)
 
-We're so excited to have you join us. In this webinar you'll learn:
-• [Key learning point 1]
-• [Key learning point 2]
-• [Key learning point 3]
+In this exclusive webinar, you will discover how to eliminate your biggest fears and set your child up for success as they transition to college. Here's a sneak peek of what you can expect:
 
-See you there!
+• Understand the Full Picture: Gain clarity on parent perceptions of college readiness.
+• Effective Academic Strategies: Discover powerful techniques that boost your student's learning.
+• Beyond Academics: Prepare your child socially and emotionally for college life.
+• Navigating Transition Concerns: Tackle fears regarding academics and emotional stability.
+• Career Readiness: Equip your child with essential skills for their future career.
 
-[Your Name / Brand]
-[Unsubscribe]`,
+Don't miss out on this opportunity to empower both you and your child!
+
+We look forward to having you with us on this journey to transform anxiety into action.
+
+Sincerely,
+Debbie Elder
+
+P.S. Don't forget to verify your email to secure your spot for the webinar!`,
 };
 
 // ── SMS Templates ──────────────────────────────────────────────────────────
