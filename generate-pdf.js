@@ -349,13 +349,13 @@ step(5, 'Add Tag: ez_webinar-offer-sent');
 step(6, 'Move Opportunity Stage → Offer Sent');
 step(7, 'Send Email: [EZ-EMAIL-12] Soft Offer (No-Show)');
 
-doc.moveDown(0.3).fontSize(10).fillColor(C.orange).font('Helvetica-Bold').text('▶  +48h – Day 4 Nudge');
-step(8,  'Wait 48 hours');
+doc.moveDown(0.3).fontSize(10).fillColor(C.orange).font('Helvetica-Bold').text('▶  +24h – Day 3 Social Proof Nudge');
+step(8,  'Wait 24 hours');
 step(9,  'Send Email: [EZ-EMAIL-13] Offer Reminder (No-Show)');
 step(10, 'Send SMS:   [EZ-SMS-08]  Offer Nudge (No-Show)');
 
-doc.moveDown(0.3).fontSize(10).fillColor(C.orange).font('Helvetica-Bold').text('▶  +48h – Day 6 Last Chance');
-step(11, 'Wait 48 hours');
+doc.moveDown(0.3).fontSize(10).fillColor(C.orange).font('Helvetica-Bold').text('▶  +24h – Day 4 Last Chance (Feb 9 – closes midnight ET)');
+step(11, 'Wait 24 hours');
 step(12, 'Send Email: [EZ-EMAIL-14] Last Chance (No-Show)');
 
 divider();
@@ -1031,54 +1031,131 @@ P.S. After midnight, the offer is closed and I cannot make exceptions. If you wa
   },
   {
     id: '[EZ-EMAIL-11]', name: 'Sorry We Missed You + Replay (No-Show)',
-    subject: "We missed you – here's the replay",
+    subject: "We missed you at the webinar — here's the replay",
     body: `Hi {{contact.firstName}},
 
-Looks like life got in the way — totally okay! Here's the replay so you can catch up:
-[REPLAY LINK HERE]  (Limited time)
+Life happens — I completely understand.
 
-[Your Name / Brand]`
+But I didn't want you to miss out on what we covered last night, because if you registered, it's because something about this topic resonated with you.
+
+Here's your replay link:
+👉 {{custom.ez_replay_link}}
+
+On the webinar, I walked through the 5 biggest fears I hear from parents every single day — and more importantly, how to work through each one before your child heads off to college:
+
+• The fear that your child isn't truly "ready" — and what readiness actually looks like
+• Why good grades can still lead to struggling freshmen (and what the research says really predicts success)
+• The hidden emotional and social gaps most parents don't see until it's too late
+• How to talk about money and college costs without it becoming a source of shame or stress
+• What career-readiness really means — and why waiting until senior year is too late
+
+The replay will only be available for a few days, so carve out 60 minutes soon and watch it.
+
+One more thing: at the end of the webinar, I share something special for parents who want to take the next step. Make sure you watch through to the end.
+
+Rooting for you and your family,
+
+Debbie Elder
+
+P.S. If this is a bad time, save the link and come back to it. But don't wait too long — the replay comes down shortly.`
   },
   {
     id: '[EZ-EMAIL-12]', name: 'Soft Offer (No-Show)',
-    subject: "Did you get a chance to watch the replay?",
+    subject: "What the webinar revealed (and what to do next)",
     body: `Hi {{contact.firstName}},
 
-If you watched the replay and are ready to take the next step, check out [COURSE NAME]:
-[OFFER LINK]
+Whether you've had a chance to watch the replay or not, I want to share the single most important thing parents took away from the webinar:
 
-No pressure. Just wanted to make sure you had the chance.
+Helping your child succeed in college isn't about working harder. It's about having the right information at the right time.
 
-[Your Name / Brand]`
+Most parents don't realize until it's too late that the skills, mindset, and support systems their child needs for college success are completely different from what got them through high school.
+
+That gap — between what high school demands and what college actually requires — is exactly what causes bright, capable students to struggle, stall out, or drop out in their first year.
+
+That's why I created the 6-Week Virtual College Success Course.
+
+Here's what's inside:
+
+✅ College Prep Masterclass Series ($2,997 value) — 6 weeks of live virtual sessions covering the academic, social, emotional, and career-readiness skills your child needs to hit the ground running
+✅ Parent & Student Action Plans — step-by-step guides for each week so nothing falls through the cracks
+✅ Private support community — connect with other parents going through the same journey
+✅ Direct access to me and my team throughout the program
+
+Total value: $3,497
+
+If you've been wondering "what's the most important thing I can do for my child right now?" — this is it.
+
+👉 Get the details and enroll here: [OFFER LINK]
+
+A few spots remain, and the cart closes February 9th at midnight ET.
+
+Debbie Elder
+
+P.S. Still haven't watched the replay? Here it is again: {{custom.ez_replay_link}} — watch through to the end to hear about everything that's included.`
   },
   {
-    id: '[EZ-EMAIL-13]', name: 'Offer Reminder (No-Show)',
-    subject: 'Still thinking about [COURSE NAME]?',
+    id: '[EZ-EMAIL-13]', name: 'Offer Reminder / Social Proof (No-Show)',
+    subject: "A parent just sent me this message...",
     body: `Hi {{contact.firstName}},
 
-Here's what's inside [COURSE NAME]:
-• [Module 1 – result]
-• [Module 2 – result]
-• [Module 3 – result]
+I got a message this week from a parent in our last cohort. I asked if I could share it:
 
-Plus you get [BONUS] when you join this week.
+"Before working with Debbie, I thought my son was ready for college. He had the grades, he had the scores. What I didn't realize was how unprepared he was for everything else — the independence, the social pressure, the self-management. We went through the program together and it completely changed how we talked about college. He's now thriving in his second semester and I feel like I actually prepared him — not just helped him get in."
 
-Check it out: [OFFER LINK]  (Closes [DATE])
+That's exactly why this program exists.
 
-[Your Name / Brand]`
+Getting into college and thriving in college are two completely different things. And most families only focus on one of them.
+
+The 6-Week Virtual College Success Course gives your child — and you — the tools, the framework, and the support to bridge that gap before they ever set foot on campus.
+
+Here's what you get:
+✅ 6-Week College Prep Masterclass Series ($2,997 value)
+✅ Parent & Student Action Plans for each week
+✅ Private community + direct access to Debbie and her team
+✅ Total value: $3,497
+
+The cart closes TOMORROW — February 9th at midnight ET.
+
+👉 Secure your spot here: [OFFER LINK]
+
+If you have any questions before enrolling, just reply to this email. I'll personally get back to you.
+
+Debbie Elder
+
+P.S. If you still haven't watched the replay, it's worth 60 minutes of your time: {{custom.ez_replay_link}}`
   },
   {
     id: '[EZ-EMAIL-14]', name: 'Last Chance (No-Show)',
-    subject: 'Last chance to join [COURSE NAME]',
+    subject: "Closes tonight at midnight — final notice",
     body: `Hi {{contact.firstName}},
 
-This is the last email I'll send about this — promise!
+This is it — the cart for the 6-Week Virtual College Success Course closes tonight at midnight ET.
 
-The offer for [COURSE NAME] closes today.
+After that, enrollment is closed. No exceptions.
 
-Join here: [OFFER LINK]
+I want to be straight with you: if you've been thinking about this but keep putting it off, I understand. It's easy to say "I'll figure it out later." But the families who wait usually end up scrambling — after the struggles start, after the first semester grades come in, after their child is already in crisis mode.
 
-[Your Name / Brand]`
+The parents who thrive are the ones who prepared early.
+
+You still have a few hours to be one of them.
+
+Here's what you get when you enroll today:
+✅ 6-Week Virtual College Prep Masterclass Series ($2,997 value)
+✅ Parent & Student Action Plans — week by week
+✅ Private support community + direct access to Debbie
+✅ Everything your child needs to go from "I hope this works out" to confident, ready, and set up for success
+
+Total value: $3,497
+
+👉 Enroll now before midnight: [OFFER LINK]
+
+Your child has one shot at their college experience. Make it count.
+
+Rooting for you,
+
+Debbie Elder
+
+P.S. If you have a quick question before enrolling, reply right now and I'll respond personally. The cart closes at midnight — don't wait.`
   },
   {
     id: '[EZ-EMAIL-15]', name: 'Purchase Confirmation + Course Access',
@@ -1184,7 +1261,7 @@ const smsTemplates = [
   { id: '[EZ-SMS-07]', name: 'Last Chance (Attended)',
     body: `LAST CHANCE {{contact.firstName}}! Offer closes TODAY: [OFFER LINK] – STOP to opt out.` },
   { id: '[EZ-SMS-08]', name: 'Offer Nudge (No-Show)',
-    body: `{{contact.firstName}}, wanted to make sure you saw the replay and offer for [COURSE NAME]: [OFFER LINK] Closes [DATE]. STOP to opt out.` },
+    body: `{{contact.firstName}}, the 6-Week College Success Course offer closes Feb 9 at midnight. Don't miss it 👉 [OFFER LINK] – STOP to opt out.` },
   { id: '[EZ-SMS-09]', name: 'Purchase Confirmation',
     body: `You're in {{contact.firstName}}! Access [COURSE NAME] here: [MEMBERSHIP PORTAL LINK] – Welcome! STOP to opt out.` },
 ];
