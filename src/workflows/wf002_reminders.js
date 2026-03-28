@@ -11,139 +11,129 @@
 
 export const EMAIL_3_DAYS = {
   subject: "You Signed Up for 5 Biggest Fears Parents Face Sending Their Child to College – Here's Why You Don't Want to Miss It!",
-  body: `Dear [Recipient's Name],
+  body: `Hi {{contact.firstName}},
 
-Time flies, and as the date approaches, it's essential to remember why you signed up for the upcoming webinar: "5 Biggest Fears Parents Face Sending Their Child to College." This isn't just another online event; it's a game-changer for parents like you who are navigating the complexities of preparing their teens for college.
+3 days until the webinar — and I want to make sure you show up.
 
-Here's what you can look forward to on February 5, 2026, at 6:00 PM ET:
+Not just because of the information we're covering (though that alone is worth the hour).
 
-• Identify key gaps: Learn about the critical gaps in addressing your child's transition to college.
-• Empower your student: Discover powerful learning skills that set the stage for academic success now and in the future.
-• Unlock potential: Equip yourself with strategies to ensure your child gets the most out of their college experience.
+But because of what happens AFTER the webinar.
 
-As a parent of a college-bound high school student, you may be feeling these pressing concerns:
+Parents who attend live get access to something I only share with people in the room. It's the step-by-step system that takes everything you learn in the session and turns it into real, lasting results for your child.
 
-• Is my child ready for college and a career?
-• What steps should I take beyond academics to prepare them?
-• How can I alleviate my worries about costs, social-emotional readiness, and their future careers?
+But more on that later.
 
-All of these questions will be answered during the webinar, tailored specifically for parents seeking to empower their children.
+For now — here's a preview of what we're covering on February 5th at 6:00 PM ET:
 
-Your presenter, Debbie Elder, is an internationally recognized innovator and best-selling author who motivates students to reach their peak performance. With her extensive background in consulting families through the college planning process, she has equipped numerous parents and students for a successful transition to college. You won't want to miss her insights.
+✔ Why most parents believe their child is college-ready — and why that belief is costing them
+✔ The hidden gaps between high school preparation and what college actually demands
+✔ Social and emotional preparation strategies that top-performing students use
+✔ How to position your child for career success before they ever set foot on campus
+✔ The one conversation you need to have with your child right now
 
-Key takeaways include:
+This is a live event. No recordings sold afterward. No second chance to ask questions in real time.
 
-• Understanding the parent perceptions of readiness for college and careers.
-• Addressing academic readiness and college preparation beyond just academics.
-• Navigating concerns related to social/emotional transitions and career readiness.
+Your webinar link: {{custom.ez_zoom_join_link}}
+📅 February 5, 2026 at 6:00 PM ET
 
-Remember, investing just one hour can lead you toward peace of mind about your student's future. Clear your calendar, remove any distractions, and commit to attending this transformative event.
-
-Join us live! Click the link below to access the webinar:
-[Register Here](#)
-
-Looking forward to seeing you there!
-
-Best,
+See you there,
 Debbie Elder
 
-P.S. Take action now! Secure your spot so you don't miss out on essential insights that could shape your child's academic future.`,
+P.S. Block off the hour on your calendar and treat this like an appointment you cannot miss. Your child's college experience may depend on it.`,
 };
 
 export const EMAIL_2_DAYS = {
   subject: "Unlock Your Child's College Success!",
-  body: `Dear [Registrant's Name],
+  body: `Hi {{contact.firstName}},
 
-Are you worried about your child's transition to college? You're not alone. Many parents share the same concerns, but attending our upcoming webinar, "5 Biggest Fears Parents Face Sending Their Child to College," can provide you with game-changing insights.
+2 days from now, something shifts.
 
-Join us live on February 5, 2026, at 6:00 PM ET. This webinar, hosted by me, Debbie Elder, is an essential resource for parents of college-bound high school students like you. We'll dive deep into the critical gaps often overlooked during the transition to college and arm you with the tools and knowledge to help your child thrive.
+Either you'll have the clarity and strategies you need to genuinely prepare your child for college — or you'll still be wondering if you're doing enough.
 
-Here's why showing up live is crucial:
+The webinar on February 5th at 6:00 PM ET is that turning point.
 
-1. Direct Access to Expert Advice: You'll get real-time guidance from my years of experience as an internationally recognized coach and consultant in college readiness. I understand the frustrations and challenges you face, and I'm here to help you navigate them effectively.
+Here's what's different about showing up LIVE vs. just catching a replay later:
 
-2. Actionable Strategies: This isn't just theory; I'll provide you with practical steps you can implement immediately to prepare your student for academic success now and a fulfilling college experience later.
+1. You get your specific questions answered in real time — not generic advice, but guidance tailored to your situation
+2. You'll hear what other parents are struggling with, and realize you're not alone in this
+3. There's an exclusive opportunity I'm sharing only with live attendees — something that can change the entire trajectory of your child's college experience
 
-3. Understanding Readiness: We'll cover essential insights into how to assess your child's academic and emotional readiness for college, giving you clarity on where they stand and what needs attention.
+I've been helping families navigate college preparation for years. What I see over and over is this:
 
-4. Communication Skills: Discover how to discuss college expectations with your child in a way that fosters open communication and reduces anxiety for both of you.
+The parents who feel most confident aren't the ones who did the most research. They're the ones who got the RIGHT strategy — early enough to actually use it.
 
-5. Networking with Other Parents: By attending live, you'll have the opportunity to hear from other parents navigating the same journey. Share experiences, ask questions, and gain support from those in a similar situation.
+That's what February 5th is about.
 
-Your child's future is too important to leave to chance. The knowledge and strategies shared during this webinar could be the key to unlocking their potential and ensuring they take the right steps towards an ideal college experience.
+Your join link: {{custom.ez_zoom_join_link}}
+📅 February 5, 2026 | 6:00 PM ET
 
-Don't let this opportunity slip away! Register to attend: [Join the Webinar](https://www.webinarlink.com) and secure your spot today. I'm looking forward to seeing you live — it's your chance to get the clarity you need to tackle college preparation head-on.
-
-Best,
+I'll see you there.
 
 Debbie Elder
 
-P.S. If you truly want to empower your student and give them the best chance at college success, you cannot afford to miss this live session. Register now!`,
+P.S. Two days goes faster than you think. Put the link somewhere you won't lose it.`,
 };
 
 export const EMAIL_1_DAY = {
   subject: "Tomorrow's the Big Day! Here's Why You Need to Show Up",
-  body: `Hi there,
+  body: `Hi {{contact.firstName}},
 
-Tomorrow is the day you've been waiting for! If you want to empower your child for both academic and college success, you need to be present for our webinar: "5 Biggest Fears Parents Face Sending Their Child to College."
+Tomorrow at 6:00 PM ET, I'm going live — and I want you there.
 
-Date: February 5, 2026
-Time: 6:00 PM ET
+Here's your webinar link: {{custom.ez_zoom_join_link}}
+📅 February 5, 2026 | 6:00 PM ET
 
-Why attend live? The #1 reason is simple: direct access to actionable insights. By tuning in live, you'll have the opportunity to get answers to your pressing questions and hear exclusive content that's only discussed in the moment. This is your chance to unlock valuable strategies that can lead your student to academic success now, ultimately paving the way for their future career.
+I want to be straight with you about something.
 
-Let's take a closer look at what you can gain from this webinar:
+The parents who get the best results for their college-bound students aren't the ones who do the most research. They're not the ones who spend the most money or stress the most.
 
-1. Understand Readiness: We'll explore parent perceptions around college readiness and what that really means. Gain clarity on how you can effectively assess your child's preparedness.
+They're the ones who get the RIGHT information at the RIGHT time — and act on it.
 
-2. Academic Excellence: Discover essential learning skills that empower students to excel in their studies, ensuring they make the most of their college experience.
+Tomorrow's session is designed to give you exactly that.
 
-3. Holistic Preparation: College preparation goes beyond academics. Learn how social, emotional, and career-related concerns play a role in your child's transition, and what you can do to support them through it.
+You'll leave with:
+→ Clarity on where your child actually stands (vs. where you think they stand)
+→ A framework for college readiness that goes far beyond GPA
+→ Specific strategies you can start implementing this week
+→ Confidence in the path forward — for both you and your student
 
-4. Addressing Concerns: Dive deep into common worries, from academic values to completion rates, and understand how you can mitigate these fears effectively.
+And for those who show up live: I'm sharing something at the end of the session that I don't advertise. It's the system I use with the families I work with privately — and tomorrow night, you'll get access to it.
 
-5. Expert Guidance: Benefit from my background as a seasoned consultant, author, and motivational speaker. I'll share proven strategies tailored specifically for parents like you.
+Show up live. Come with your biggest question. I'll answer it in real time.
 
-Your participation can make a difference. You owe it to your child to empower them to not only get into college but thrive while they're there. Join me live so you can ask questions, gain insights, and feel confident that you are doing everything in your power to prepare your child for success.
-
-Don't miss out!
-Join us live by clicking this link: [Join Webinar](#)
-
-Looking forward to seeing you tomorrow!
-
-Best,
+See you tomorrow evening,
 Debbie Elder
 
-P.S. Remember, being live means not just gaining wisdom but also connecting with a community of parents who share your concerns. Together, we can tackle the challenges ahead!`,
+P.S. Can't be at your computer at 6 PM? Join from your phone. The important thing is that you're there.`,
 };
 
 export const EMAIL_1_HOUR = {
   subject: "1 Hour to Go! Drop Everything and Show Up!",
-  body: `Dear Parent,
+  body: `Hi {{contact.firstName}},
 
-This is your final reminder! In just one hour, we'll dive into the 5 Biggest Fears Parents Face Sending Their Child to College. Don't miss out on vital insights that can shape your child's college experience!
+We go live in ONE HOUR.
 
-Why should you be here? As a parent of a college-bound high school student, you deserve to tackle the crucial concerns surrounding academic readiness, emotional transition, and career preparation head-on. This isn't just another webinar—it's a pathway to empowering your child for academic success now and thriving in college later.
+Click here to join: {{custom.ez_zoom_join_link}}
+🕕 6:00 PM ET — Tonight
 
-Here's what you'll discover with me, Debbie Elder:
-1. Current Parent Concerns: Understand common perceptions of readiness for college and careers.
-2. Academic Preparedness: Learn what truly prepares your student for college-level work.
-3. Holistic College Prep: Discover strategies that go beyond academics to ensure a smooth transition.
-4. Value and Completion: Tackle questions around the true cost versus the value of college education.
-5. Social/Emotional Readiness: Equip yourself with tools to support your child's emotional journey to college.
+Before we start, three things:
 
-With years of experience as a consultant and educator, I'll share proven strategies that have empowered countless families. This is your moment—turn off your phone, silence social media, and get ready for insights that could define your child's future.
+1. Find a quiet spot where you can focus for 60 minutes
+2. Have a notepad ready — you'll want to write things down
+3. Come with your biggest question about your child's college readiness
 
-Join us TONIGHT at 6:00 PM ET. Use this link to attend: [Join Webinar Now!](#)
+Here's why showing up LIVE matters more than watching the replay later:
 
-Don't let hesitation hold you back. Your child's college success is on the line, and this webinar will take you a step closer to achieving that dream!
+The replay won't have the live Q&A. It won't have the energy of a room full of parents who are in the same position you are. And it won't have the special opportunity I'm sharing with tonight's attendees only — the one that gives you the complete system, not just the strategy overview.
 
-See you shortly!
+This is your moment to get the clarity you've been looking for.
 
-Best,
+🔗 Join here: {{custom.ez_zoom_join_link}}
+
+See you in an hour,
 Debbie Elder
 
-P.S. Remember, it's just an hour away. Prepare to take notes!`,
+P.S. Doors open 10 minutes early. Join early to make sure your audio and video are working before we start.`,
 };
 
 // ── SMS Copy ───────────────────────────────────────────────────────────────

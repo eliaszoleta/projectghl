@@ -708,283 +708,326 @@ divider();
 
 const emails = [
   {
-    id: '[EZ-EMAIL-01]', name: 'Webinar Confirmation (Double Opt-in)',
+    id: '[EZ-EMAIL-01]', name: 'Webinar Confirmation',
     subject: "Confirm Your Registration for Our Upcoming Webinar!",
-    body: `Dear [Parent's Name],
+    body: `Hi [First Name],
 
-Thank you for signing up for our webinar titled "5 Biggest Fears Parents Face Sending Their Child to College." We are excited to have you join us on February 5, 2026, at 6:00 PM ET.
+You're in! Your spot for "5 Biggest Fears Parents Face Sending Their Child to College" is confirmed.
 
-Before we can confirm your registration, we need you to verify your email address. This helps us ensure that you receive all the important details and updates regarding the webinar.
+Date: February 5, 2026  |  Time: 6:00 PM ET
+Your join link: [WEBINAR LINK]
 
-[Click here to verify your email!]
+Save this email — you'll want it on February 5th.
 
-In this exclusive webinar, you will discover how to eliminate your biggest fears and set your child up for success as they transition to college. Here's a sneak peek of what you can expect:
-• Understand the Full Picture: Gain clarity on parent perceptions of college readiness.
-• Effective Academic Strategies: Discover powerful techniques that boost your student's learning.
-• Beyond Academics: Prepare your child socially and emotionally for college life.
-• Navigating Transition Concerns: Tackle fears regarding academics and emotional stability.
-• Career Readiness: Equip your child with essential skills for their future career.
+Here's a preview of what you're going to discover:
+→ The #1 mindset mistake parents make about college readiness (and how to fix it before it's too late)
+→ Why academic grades alone won't guarantee your child's success in college — and what actually does
+→ The social and emotional blind spots most parents miss that lead to students struggling or dropping out
+→ How to navigate the real cost of college without your child sacrificing the right opportunities
+→ Career-readiness strategies your child needs NOW — not after they graduate
 
-Don't miss out on this opportunity to empower both you and your child!
-We look forward to having you with us on this journey to transform anxiety into action.
+This is a live session — your questions get answered in real time.
 
-Sincerely,
+One more thing: attendees get access to something special I'll only share with people in the room. Show up live — you won't want to miss it.
+
+See you February 5th at 6:00 PM ET!
 Debbie Elder
 
-P.S. Don't forget to verify your email to secure your spot for the webinar!`
+P.S. Add the webinar to your calendar now so it doesn't slip through the cracks. [Add to Google Calendar] [Add to Outlook]`
   },
   {
     id: '[EZ-EMAIL-02]', name: '3 Days Before Reminder',
-    subject: "You Signed Up for 5 Biggest Fears Parents Face Sending Their Child to College – Here's Why You Don't Want to Miss It!",
-    body: `Dear [Recipient's Name],
+    subject: "You Signed Up for 5 Biggest Fears... – Here's Why You Don't Want to Miss It!",
+    body: `Hi [First Name],
 
-Time flies, and as the date approaches, it's essential to remember why you signed up for the upcoming webinar: "5 Biggest Fears Parents Face Sending Their Child to College." This isn't just another online event; it's a game-changer for parents like you who are navigating the complexities of preparing their teens for college.
+3 days until the webinar — and I want to make sure you show up.
 
-Here's what you can look forward to on February 5, 2026, at 6:00 PM ET:
-• Identify key gaps: Learn about the critical gaps in addressing your child's transition to college.
-• Empower your student: Discover powerful learning skills that set the stage for academic success now and in the future.
-• Unlock potential: Equip yourself with strategies to ensure your child gets the most out of their college experience.
+Not just because of the information we're covering (though that alone is worth the hour).
+But because of what happens AFTER the webinar.
 
-As a parent of a college-bound high school student, you may be feeling these pressing concerns:
-• Is my child ready for college and a career?
-• What steps should I take beyond academics to prepare them?
-• How can I alleviate my worries about costs, social-emotional readiness, and their future careers?
+Parents who attend live get access to something I only share with people in the room — the step-by-step system that turns everything you learn into real results for your child.
 
-All of these questions will be answered during the webinar, tailored specifically for parents seeking to empower their children.
+Here's a preview of what we're covering February 5th at 6:00 PM ET:
+✔ Why most parents believe their child is college-ready — and why that belief is costing them
+✔ The hidden gaps between high school preparation and what college actually demands
+✔ Social and emotional preparation strategies that top-performing students use
+✔ How to position your child for career success before they ever set foot on campus
+✔ The one conversation you need to have with your child right now
 
-Key takeaways include:
-• Understanding the parent perceptions of readiness for college and careers.
-• Addressing academic readiness and college preparation beyond just academics.
-• Navigating concerns related to social/emotional transitions and career readiness.
+This is a live event. No recordings sold afterward. No second chance for real-time Q&A.
 
-Join us live! [Register Here]
+Your webinar link: [WEBINAR LINK]
+February 5, 2026 at 6:00 PM ET
 
-Best,
+See you there,
 Debbie Elder
 
-P.S. Take action now! Secure your spot so you don't miss out on essential insights that could shape your child's academic future.`
+P.S. Block off the hour on your calendar and treat this like an appointment you cannot miss. Your child's college experience may depend on it.`
   },
   {
     id: '[EZ-EMAIL-02B]', name: '2 Days Before Reminder',
     subject: "Unlock Your Child's College Success!",
-    body: `Dear [Registrant's Name],
+    body: `Hi [First Name],
 
-Are you worried about your child's transition to college? You're not alone. Many parents share the same concerns, but attending our upcoming webinar, "5 Biggest Fears Parents Face Sending Their Child to College," can provide you with game-changing insights.
+2 days from now, something shifts.
 
-Join us live on February 5, 2026, at 6:00 PM ET. Here's why showing up live is crucial:
+Either you'll have the clarity and strategies you need to genuinely prepare your child for college — or you'll still be wondering if you're doing enough.
 
-1. Direct Access to Expert Advice: Real-time guidance from years of experience as an internationally recognized coach and consultant in college readiness.
-2. Actionable Strategies: Practical steps you can implement immediately to prepare your student for academic success.
-3. Understanding Readiness: Essential insights into how to assess your child's academic and emotional readiness for college.
-4. Communication Skills: How to discuss college expectations with your child to foster open communication.
-5. Networking with Other Parents: Hear from other parents navigating the same journey.
+The webinar on February 5th at 6:00 PM ET is that turning point.
 
-Don't let this opportunity slip away! [Join the Webinar]
+Here's what's different about showing up LIVE vs. catching a replay later:
+1. You get your specific questions answered in real time — tailored to your situation
+2. You'll hear what other parents are struggling with, and realize you're not alone
+3. There's an exclusive opportunity I'm only sharing with live attendees — one that can change the entire trajectory of your child's college experience
 
-Best,
+The parents who feel most confident aren't the ones who did the most research. They're the ones who got the RIGHT strategy — early enough to actually use it.
+
+That's what February 5th is about.
+
+Your join link: [WEBINAR LINK]
+February 5, 2026 | 6:00 PM ET
+
+See you there,
 Debbie Elder
 
-P.S. If you truly want to empower your student and give them the best chance at college success, you cannot afford to miss this live session. Register now!`
+P.S. Two days goes faster than you think. Put the link somewhere you won't lose it.`
   },
   {
     id: '[EZ-EMAIL-03]', name: '1 Day Before Reminder',
     subject: "Tomorrow's the Big Day! Here's Why You Need to Show Up",
-    body: `Hi there,
+    body: `Hi [First Name],
 
-Tomorrow is the day you've been waiting for! If you want to empower your child for both academic and college success, you need to be present for our webinar: "5 Biggest Fears Parents Face Sending Their Child to College."
+Tomorrow at 6:00 PM ET, I'm going live — and I want you there.
 
-Date: February 5, 2026  |  Time: 6:00 PM ET
+Your webinar link: [WEBINAR LINK]
+February 5, 2026 | 6:00 PM ET
 
-Why attend live? Direct access to actionable insights — get answers to your pressing questions and hear exclusive content only discussed in the moment.
+The parents who get the best results for their college-bound students aren't the ones who do the most research or spend the most money. They're the ones who get the RIGHT information at the RIGHT time — and act on it.
 
-What you'll gain:
-1. Understand Readiness: Explore parent perceptions around college readiness.
-2. Academic Excellence: Discover essential learning skills that empower students to excel.
-3. Holistic Preparation: Learn how social, emotional, and career-related concerns play a role.
-4. Addressing Concerns: Dive deep into academic values and completion rate worries.
-5. Expert Guidance: Proven strategies from a seasoned consultant, author, and speaker.
+Tomorrow's session is designed to give you exactly that.
 
-Join us live: [Join Webinar]
+You'll leave with:
+→ Clarity on where your child actually stands (vs. where you think they stand)
+→ A framework for college readiness that goes far beyond GPA
+→ Specific strategies you can start implementing this week
+→ Confidence in the path forward — for both you and your student
 
-Best,
+And for those who show up live: I'm sharing something at the end that I don't advertise — the system I use with families I work with privately. Tomorrow night, you'll get access to it.
+
+Show up live. Come with your biggest question. I'll answer it in real time.
+
+See you tomorrow evening,
 Debbie Elder
 
-P.S. Being live means not just gaining wisdom but connecting with a community of parents who share your concerns.`
+P.S. Can't be at your computer at 6 PM? Join from your phone. The important thing is that you're there.`
   },
   {
     id: '[EZ-EMAIL-04]', name: '1 Hour Before Reminder',
     subject: "1 Hour to Go! Drop Everything and Show Up!",
-    body: `Dear Parent,
+    body: `Hi [First Name],
 
-This is your final reminder! In just one hour, we'll dive into the 5 Biggest Fears Parents Face Sending Their Child to College. Don't miss out on vital insights that can shape your child's college experience!
+We go live in ONE HOUR.
 
-Here's what you'll discover with me, Debbie Elder:
-1. Current Parent Concerns: Understand common perceptions of readiness for college and careers.
-2. Academic Preparedness: Learn what truly prepares your student for college-level work.
-3. Holistic College Prep: Discover strategies that go beyond academics.
-4. Value and Completion: Tackle questions around the true cost versus the value of college education.
-5. Social/Emotional Readiness: Equip yourself with tools to support your child's emotional journey.
+Click here to join: [WEBINAR LINK]
+6:00 PM ET — Tonight
 
-Join us TONIGHT at 6:00 PM ET: [Join Webinar Now!]
+Before we start, three things:
+1. Find a quiet spot where you can focus for 60 minutes
+2. Have a notepad ready — you'll want to write things down
+3. Come with your biggest question about your child's college readiness
 
-Best,
+Here's why showing up LIVE matters more than watching the replay later:
+The replay won't have the live Q&A. It won't have the energy of a room full of parents who are in the same position you are. And it won't have the special opportunity I'm sharing with tonight's attendees only.
+
+This is your moment to get the clarity you've been looking for.
+
+Join here: [WEBINAR LINK]
+
+See you in an hour,
 Debbie Elder
 
-P.S. Remember, it's just an hour away. Prepare to take notes!`
+P.S. Doors open 10 minutes early. Join early to make sure your audio and video are working before we start.`
   },
   {
     id: '[EZ-EMAIL-05]', name: 'Replay + Thank You (Attended)',
     subject: "Here's the Replay!",
-    body: `Dear Parents,
+    body: `Hi [First Name],
 
-Thank you for joining me for the "5 Biggest Fears Parents Face Sending Their Child to College" webinar last night. I appreciate your commitment to ensuring your child's success during this critical transition.
+Thank you for showing up last night. It meant a lot to have you in the room.
 
-[Watch the Replay Here!] — This session is packed with vital insights. Remember, this valuable replay won't be available forever.
+Here's your replay link: [REPLAY LINK]
+⚠️ Available until Monday, February 9th at midnight only.
 
-Why Did This Webinar Matter? Our discussion covered crucial topics like:
-• Understanding your child's perceived readiness for college and careers.
-• Assessing academic readiness and the essential preparation that goes beyond just grades.
-• Addressing concerns related to social and emotional transitions.
-• Tackling career-related anxieties that both you and your student may experience.
+You know we covered a lot of ground — the readiness gaps most parents overlook, the social and emotional factors that determine whether students thrive or struggle, and the career blind spots that catch families off guard.
 
-Your Journey to Empowerment Begins Here — I urge you to consider participating in my 6-week Virtual College Success Course (total value: $3,497, includes College Prep Masterclass Series valued at $2,997).
+But here's what I didn't get to fully share during the webinar:
 
-[click here to find out more about the course and secure your spot today!]
+The exact 6-week system I use with the families I work with privately — the one that takes everything we talked about and turns it into a real, personalized plan for your child.
 
-Best regards,
+It's called the 6-Week Virtual College Success Course. Here's what it includes:
+→ The College Prep Masterclass Series ($2,997 value) — builds self-leadership skills your student needs to succeed in college and beyond
+→ 6 weeks of structured guidance — clear focus each week, no overwhelm
+→ A complete collegiate roadmap built around your child's specific goals
+→ Total value: $3,497
+
+I'll share the full details — including the special attendee pricing — in tomorrow's email.
+
+For now, watch the replay while it's still fresh: [REPLAY LINK]
+
+Talk soon,
 Debbie Elder
 
-P.S. Watching the replay today could make all the difference! Don't let this opportunity slip away.`
+P.S. Have questions before tomorrow? Just reply to this email. I read every one.`
   },
   {
-    id: '[EZ-EMAIL-06]', name: 'Offer Day 1 (Attended) – Replay + Course',
+    id: '[EZ-EMAIL-06]', name: 'Offer Day 1 (Attended) – Full Offer',
     subject: "Replay + How 6-Week Course Empowers Your Student",
-    body: `Dear Parents,
+    body: `Hi [First Name],
 
-Did you know that nearly 70% of students entering college feel unprepared for the transition? If you missed our webinar, the replay is now available — watch it while you still can.
+Yesterday I mentioned something I've been building for parents exactly like you.
 
-Key takeaways from the session:
-1. Understanding Readiness: Gauge your child's readiness for college and careers.
-2. Academic Preparation: Vital skills and practices that enhance your student's academic outcomes.
-3. Navigating Beyond Academics: Social and emotional elements crucial for a smooth transition.
-4. Career-Related Insights: What's needed to prepare your child for their future career path.
-5. Peace of Mind: How proper preparation leads to confidence for both you and your student.
+Today I want to tell you everything about it.
 
-Enroll in my 6-week Virtual College Success Course (total value: $3,497, includes College Prep Masterclass Series — a $2,997 value). Check out the course details and grab your spot now: [targeturl]
+It's called the 6-Week Virtual College Success Course — and if your child is heading to college in the next 1-4 years, this might be the most important investment you make in their future.
 
-Best,
+THE COLLEGE PREP MASTERCLASS SERIES (valued at $2,997)
+A step-by-step curriculum that gives your student the self-leadership skills, study strategies, and emotional resilience they need to not just survive college — but excel.
+
+THE 6-WEEK PARENT SUCCESS FRAMEWORK
+Each week has a clear focus: what to work on, what conversations to have with your child, and how to track progress. No guessing. No overwhelm. Just a proven path forward.
+
+WHAT YOU'LL HAVE AFTER 6 WEEKS:
+✔ A complete collegiate roadmap tailored to your child's specific goals
+✔ A student who knows how to manage themselves academically, socially, and emotionally
+✔ Peace of mind that you've done everything possible to set them up for success
+Total value: $3,497
+
+As a webinar attendee, you have access to this at a special enrollment price — but only until Monday, February 9th at midnight. After that, this offer closes.
+
+👉 [Click here to learn more and enroll] — [targeturl]
+
+Replay still available (until Feb 9th): [REPLAY LINK]
+
 Debbie Elder
 
-P.S. The replay will only be available for a limited time — watch it now and explore how our course can make a real difference. [replay link]`
+P.S. Enrollment is limited to make sure every family gets the support they need. Once spots are filled, they're gone.`
   },
   {
-    id: '[EZ-EMAIL-07]', name: 'Offer Day 2 (Attended) – FAQ / Unlock Potential',
+    id: '[EZ-EMAIL-07]', name: 'Offer Day 2 (Attended) – FAQ / Objections',
     subject: "Don't Miss Out: Unlock Your Student's True Potential",
-    body: `Hi there,
+    body: `Hi [First Name],
 
-Did you know that over 60% of students feel unprepared for the challenges of college? That statistic is alarming, and it underscores the urgent need for effective college preparation strategies.
+Since yesterday's email about the 6-Week Virtual College Success Course, I've gotten a handful of questions. Let me answer the most common ones.
 
-Key insights from the webinar:
-1. Understanding Readiness: Gauge whether your child is truly prepared for college responsibilities.
-2. Beyond Academics: Essential non-academic skills that are just as crucial to college success.
-3. Addressing Concerns: Tackle fears related to value, completion, and emotional readiness.
-4. Empowering Your Child: Tools they'll need to excel academically and socially on campus.
-5. Strategizing for Success: Create a strategic plan tailored to your child's collegiate goals.
+"Is this right for my child even if they're only a sophomore?"
+Yes — the earlier you start, the better. A student who builds these habits in 10th grade has a massive advantage over one who tries to figure it out freshman year of college.
 
-Watch the replay and explore the 6-week Virtual College Success Course at [targeturl].
+"What if my child isn't motivated?"
+That's exactly what this course addresses. One of the core components is developing intrinsic motivation and self-leadership — so the drive to succeed comes from them. Many parents say this is the biggest shift they see.
 
-Why should you enroll?
-• Unlock your child's potential without adding stress.
-• Get peace of mind knowing they're fully prepared for academic success.
-• Avoid the long learning curves: Learn 100% faster with great retention.
-• Define clear collegiate goals and implement plans without the struggle.
+"Is it worth the investment?"
+The average cost of a student dropping out in their first year is tens of thousands of dollars. This course exists to prevent that. The ROI isn't just financial — it's your child's confidence, their career trajectory, and your peace of mind.
 
-[Click here to learn more and secure your spot today!]
+"Do I need to be tech-savvy?"
+Not at all. If you can watch a video, you can do this.
 
-Best,
+Still have a question? Reply to this email — I'm happy to help you figure out if this is the right fit.
+
+The special offer is open until Monday, February 9th at midnight.
+
+👉 [Click here to enroll in the 6-Week Virtual College Success Course] — [targeturl]
+
+Replay still available (until Feb 9th): [REPLAY LINK]
+
 Debbie Elder
 
-P.S. Don't wait to give your child the tools they need to succeed. Enroll in the 6-week Virtual College Success Course now!`
+P.S. The families who hesitate are the ones who wish they hadn't. Don't let the deadline sneak up on you.`
   },
   {
-    id: '[EZ-EMAIL-08]', name: 'Offer Day 3 (Attended) – Urgency',
+    id: '[EZ-EMAIL-08]', name: 'Offer Day 3 (Attended) – Social Proof + Urgency',
     subject: "Time Is Running Out – Replay & Offer Closing Soon!",
-    body: `Dear Parents,
+    body: `Hi [First Name],
 
-Last week, we held an insightful webinar titled, "5 Biggest Fears Parents Face Sending Their Child to College." The purpose was to expose critical gaps in preparing for your child's transition to college.
+Quick update: the replay and the enrollment offer both close tomorrow — Monday, February 9th at midnight.
 
-Key takeaways:
-1. Understanding Readiness: Insight into common parent perceptions and how to address them.
-2. Academic Preparation Beyond Just Grades: Prepare your child academically, socially, and emotionally.
-3. Navigating Costs and Value: Tackle critical concerns surrounding college expenses and graduation value.
-4. Career Preparedness: Essential career skills that need to be developed prior to college enrollment.
-5. Successful Transitions: Practical advice on easing the high school to college transition.
+One of the parents who went through the 6-Week Virtual College Success Course sent me this:
 
-The replay is available, but only for a limited time, and so is my exclusive offer for the 6-week Virtual College Success Course. This offer is set to expire tomorrow, Monday, 02/09/2026.
+"Before this course, I didn't know where to start. My daughter was a junior and I was panicking. After going through the material with her, she has a real plan. She knows what she wants, she knows how to study, and she's actually excited about college now. I wish I had found this sooner."
 
-The value of this offer is substantial:
-• The College Prep Masterclass Series valued at $2,997.00.
-• All included in the 6-week Virtual College Success Course.
+That's what's possible on the other side of this decision.
 
-Click [here] to watch the webinar replay and secure your spot in the course.
+Here's what you get when you enroll:
+→ The College Prep Masterclass Series ($2,997 value)
+→ The 6-Week Parent Success Framework — one clear focus per week
+→ A complete collegiate roadmap for your child
+→ Total value: $3,497 — at a special attendee price until tomorrow midnight
 
-Warm regards,
+👉 [Click here to enroll before the offer closes] — [targeturl]
+
+Replay link (expires tomorrow midnight): [REPLAY LINK]
+
 Debbie Elder
 
-P.S. Time is running out! Make sure to take advantage of this unique opportunity before it's too late!`
+P.S. Ask yourself: what is it worth to know — really know — that your child is ready for college? That answer is worth more than any price tag on this course.`
   },
   {
     id: '[EZ-EMAIL-09]', name: 'Last Call – Morning (Day 4)',
     subject: "Last Call - Replay and Offer Closing Today!",
-    body: `Dear [Recipient's Name],
+    body: `Hi [First Name],
 
-This is your last chance to watch the replay of my webinar, 5 Biggest Fears Parents Face Sending Their Child to College, held on February 5, 2026, at 6:00 PM ET.
+Today is the last day.
 
-Key takeaways from the webinar:
-1. Parent perceptions of readiness: How parents view their child's preparedness, and what that means for success.
-2. Social/emotional transition concerns: Challenges students face adapting to a college environment.
-3. Career-related concerns: Aligning your child's education with career aspirations.
+The replay comes down tonight at midnight. The enrollment offer for the 6-Week Virtual College Success Course closes with it. After tonight, this is gone.
 
-Don't miss the opportunity to unlock your child's potential with the 6-week Virtual College Success Course. It includes:
-• The College Prep Masterclass Series valued at $2,997.00 — to equip your student with self-leadership skills.
-• Strategies to make the transition to college smoother and create clear collegiate goals.
+I don't say that to pressure you. I say it because I've seen what happens when parents wait.
 
-Total value: $3,497.00. This offer closes tonight at midnight, Monday, February 9, 2026.
+They tell themselves they'll deal with it later. And later becomes: their child struggling through freshman year. Calling home overwhelmed. Losing scholarship eligibility. Changing majors because no one helped them figure out who they are and where they're going.
 
-[Watch the Replay and Learn More About the Course]
+This course prevents that.
 
-To your child's success,
+Here's what closes tonight at midnight:
+✔ Enrollment in the 6-Week Virtual College Success Course
+✔ The College Prep Masterclass Series ($2,997 value) — included at no extra charge
+✔ The special attendee pricing — not available after tonight
+✔ Access to the webinar replay
+Total value: $3,497. Tonight only.
+
+👉 [Click here to enroll — offer closes at midnight] — [targeturl]
+
 Debbie Elder
 
-P.S. This is your final call! Secure your place today. 🌟`
+P.S. If you have any last questions before you decide, reply to this email right now. I'll get back to you as fast as I can.`
   },
   {
     id: '[EZ-EMAIL-10]', name: 'Last Chance – Evening (Day 4)',
     subject: "Last Chance: Course Offer Ends Tonight!",
-    body: `Dear [Recipient's Name],
+    body: `Hi [First Name],
 
-This is it! Tonight is your last opportunity to join the 6-week Virtual College Success Course.
+A few hours left.
 
-Here's what we covered in the webinar:
-1. Academic Readiness: Understanding what college expects from your child academically.
-2. Social and Emotional Preparation: Tips to support your child's emotional transition.
-3. Career-Related Concerns: How to help your student choose the right path.
-4. Navigating Financial Considerations: Strategies to afford college without overwhelming debt.
-5. Unlocking Your Child's Potential: Practical tools to inspire motivation and self-leadership.
+The 6-Week Virtual College Success Course enrollment closes at midnight tonight. No extensions, no exceptions.
 
-Special Offer: Sign up before midnight tonight! This exclusive program includes the College Prep Masterclass Series—a $2,997.00 value—totaling $3,497.00 in invaluable benefits.
+I know you've been thinking about this. Every investment feels significant when you're in the moment of deciding.
 
-By enrolling, you will:
-• Gain the knowledge to help your child succeed academically and socially.
-• Conquer the fears and uncertainties surrounding the college journey.
-• Develop actionable goals and a step-by-step strategy tailored for your student's needs.
+But here's what I want you to consider:
 
-The hard deadline is tonight at midnight, February 9, 2026.
+You showed up to the webinar because something about your child's college readiness was worrying you. That worry didn't come from nowhere. It came from the part of you that knows the stakes are real — and that wants to get this right.
 
-Best,
+This course is the answer to that worry.
+
+6 weeks. A proven system. A roadmap built around your child. And the College Prep Masterclass Series ($2,997 value) included as part of enrollment.
+
+✔ Total value: $3,497
+✔ Tonight only — midnight deadline — hard close
+✔ Includes everything you need to go from worried to confident
+
+👉 [Click here to enroll now] — [targeturl]
+
+The parents who've done this don't regret it.
+
 Debbie Elder
 
-P.S. This is your final reminder—don't wait! Take the next step towards a successful college journey for your child.`
+P.S. After midnight, the offer is closed and I cannot make exceptions. If you want in, now is the time. [Enroll here — targeturl]`
   },
   {
     id: '[EZ-EMAIL-11]', name: 'Sorry We Missed You + Replay (No-Show)',

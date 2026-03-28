@@ -10,30 +10,35 @@
 
 export const EMAIL_CONFIRMATION = {
   subject: "Confirm Your Registration for Our Upcoming Webinar!",
-  body: `Dear [Parent's Name],
+  body: `Hi {{contact.firstName}},
 
-Thank you for signing up for our webinar titled "5 Biggest Fears Parents Face Sending Their Child to College." We are excited to have you join us on February 5, 2026, at 6:00 PM ET.
+You're in! Your spot for "5 Biggest Fears Parents Face Sending Their Child to College" is confirmed.
 
-Before we can confirm your registration, we need you to verify your email address. This helps us ensure that you receive all the important details and updates regarding the webinar.
+Here are your event details:
+📅 Date: February 5, 2026
+🕕 Time: 6:00 PM ET
+🔗 Your join link: {{custom.ez_zoom_join_link}}
 
-[Click here to verify your email!](#)
+Save this email — you'll want it on February 5th.
 
-In this exclusive webinar, you will discover how to eliminate your biggest fears and set your child up for success as they transition to college. Here's a sneak peek of what you can expect:
+Here's a preview of what you're going to discover on the webinar:
 
-• Understand the Full Picture: Gain clarity on parent perceptions of college readiness.
-• Effective Academic Strategies: Discover powerful techniques that boost your student's learning.
-• Beyond Academics: Prepare your child socially and emotionally for college life.
-• Navigating Transition Concerns: Tackle fears regarding academics and emotional stability.
-• Career Readiness: Equip your child with essential skills for their future career.
+→ The #1 mindset mistake parents make about college readiness (and how to fix it before it's too late)
+→ Why academic grades alone won't guarantee your child's success in college — and what actually does
+→ The social and emotional blind spots most parents miss that lead to students struggling or dropping out
+→ How to navigate the real cost of college without your child sacrificing the right opportunities
+→ Career-readiness strategies your child needs NOW — not after they graduate
 
-Don't miss out on this opportunity to empower both you and your child!
+This is a live session, so your questions get answered in real time.
 
-We look forward to having you with us on this journey to transform anxiety into action.
+One more thing: attendees get access to something special I'll be sharing on the webinar. Show up live — you won't want to miss it.
 
-Sincerely,
+See you February 5th at 6:00 PM ET!
+
 Debbie Elder
 
-P.S. Don't forget to verify your email to secure your spot for the webinar!`,
+P.S. Add the webinar to your calendar now so it doesn't slip through the cracks.
+[Add to Google Calendar] [Add to Outlook]`,
 };
 
 // ── SMS Templates ──────────────────────────────────────────────────────────
