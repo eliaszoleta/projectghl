@@ -65,7 +65,7 @@ If you've been wondering "what's the most important thing I can do for my child 
 
 👉 Get the details and enroll here: [OFFER LINK]
 
-A few spots remain, and the cart closes February 9th at midnight ET.
+A few spots remain, and the cart closes [CART CLOSE DATE] at midnight ET.
 
 Debbie Elder
 
@@ -92,7 +92,7 @@ Here's what you get:
 ✅ Private community + direct access to Debbie and her team
 ✅ Total value: $3,497
 
-The cart closes TOMORROW — February 9th at midnight ET.
+The cart closes TOMORROW — [CART CLOSE DATE] at midnight ET.
 
 👉 Secure your spot here: [OFFER LINK]
 
@@ -139,7 +139,7 @@ P.S. If you have a quick question before enrolling, reply right now and I'll res
 // ── SMS Copy ───────────────────────────────────────────────────────────────
 
 export const SMS_NUDGE = {
-  body: `{{contact.firstName}}, the 6-Week College Success Course offer closes Feb 9 at midnight. Don't miss it 👉 [OFFER LINK] – STOP to opt out.`,
+  body: `{{contact.firstName}}, the 6-Week College Success Course offer closes [CART CLOSE DATE] at midnight. Don't miss it 👉 [OFFER LINK] – STOP to opt out.`,
 };
 
 export const WF004 = {
@@ -212,7 +212,7 @@ export const WF004 = {
       body: SMS_NUDGE,
     },
 
-    // ── Day 4 After: Last Chance (Feb 9 – cart closes midnight) ───────────
+    // ── Day 4 After: Last Chance ([CART CLOSE DATE] – cart closes midnight) ───────────
     {
       step: 11,
       action: 'Wait',
@@ -246,7 +246,7 @@ export function printBlueprint(log) {
   log('║    Step 8 → Wait 24h                                        ║');
   log('║    Step 9 → Email: [EZ-EMAIL-13] Offer Reminder             ║');
   log('║    Step 10→ SMS:   [EZ-SMS-08]   Offer Nudge               ║');
-  log('║  +24h: Day 4 Last Chance (Feb 9 – midnight close)          ║');
+  log('║  +24h: Day 4 Last Chance ([CART CLOSE DATE] – midnight close)          ║');
   log('║    Step 11→ Wait 24h                                        ║');
   log('║    Step 12→ Email: [EZ-EMAIL-14] Last Chance                ║');
   log('╚══════════════════════════════════════════════════════════════╝');

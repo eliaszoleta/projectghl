@@ -19,7 +19,7 @@ export const EMAIL_REPLAY_ATTENDED = {
 Thank you for showing up last night. It meant a lot to have you in the room.
 
 Here's your replay link: [REPLAY LINK]
-⚠️ This replay will only be available until Monday, February 9th at midnight.
+⚠️ This replay will only be available until [CART CLOSE DATE] at midnight.
 
 If you were there live, you know we covered a lot of ground — the readiness gaps most parents overlook, the social and emotional factors that determine whether students thrive or struggle, and the career blind spots that catch families off guard.
 
@@ -72,11 +72,11 @@ WHAT YOU'LL HAVE AFTER 6 WEEKS:
 
 Total program value: $3,497
 
-As a webinar attendee, you have access to this at a special enrollment price — but only until Monday, February 9th at midnight. After that, this offer closes.
+As a webinar attendee, you have access to this at a special enrollment price — but only until [CART CLOSE DATE] at midnight. After that, this offer closes.
 
 👉 [Click here to learn more and enroll] — [targeturl]
 
-Still need to watch the replay? It's still available here: [REPLAY LINK] (until Feb 9th)
+Still need to watch the replay? It's still available here: [REPLAY LINK] (until [CART CLOSE DATE])
 
 Debbie Elder
 
@@ -103,11 +103,11 @@ Not at all. Everything is delivered through a simple online platform. If you can
 
 Still have a question I haven't answered? Reply to this email — I'm happy to help you figure out if this is the right fit for your family.
 
-Ready to move forward? The special offer is open until Monday, February 9th at midnight.
+Ready to move forward? The special offer is open until [CART CLOSE DATE] at midnight.
 
 👉 [Click here to enroll in the 6-Week Virtual College Success Course] — [targeturl]
 
-Replay still available here (until Feb 9th): [REPLAY LINK]
+Replay still available here (until [CART CLOSE DATE]): [REPLAY LINK]
 
 Debbie Elder
 
@@ -118,7 +118,7 @@ export const EMAIL_OFFER_D5 = {
   subject: "Time Is Running Out – Replay & Offer Closing Soon!",
   body: `Hi {{contact.firstName}},
 
-Quick update: the replay and the enrollment offer for the 6-Week Virtual College Success Course both close tomorrow — Monday, February 9th at midnight.
+Quick update: the replay and the enrollment offer for the 6-Week Virtual College Success Course both close tomorrow — [CART CLOSE DATE] at midnight.
 
 After that, the course goes back to its regular price, and I can't guarantee when enrollment reopens.
 

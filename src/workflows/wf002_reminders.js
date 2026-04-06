@@ -23,7 +23,7 @@ Parents who attend live get access to something I only share with people in the 
 
 But more on that later.
 
-For now — here's a preview of what we're covering on February 5th at 6:00 PM ET:
+For now — here's a preview of what we're covering on [WEBINAR DATE] at [WEBINAR TIME]:
 
 ✔ Why most parents believe their child is college-ready — and why that belief is costing them
 ✔ The hidden gaps between high school preparation and what college actually demands
@@ -34,7 +34,7 @@ For now — here's a preview of what we're covering on February 5th at 6:00 PM E
 This is a live event. No recordings sold afterward. No second chance to ask questions in real time.
 
 Your webinar link: {{custom.ez_zoom_join_link}}
-📅 February 5, 2026 at 6:00 PM ET
+📅 [WEBINAR DATE] at [WEBINAR TIME]
 
 See you there,
 Debbie Elder
@@ -50,7 +50,7 @@ export const EMAIL_2_DAYS = {
 
 Either you'll have the clarity and strategies you need to genuinely prepare your child for college — or you'll still be wondering if you're doing enough.
 
-The webinar on February 5th at 6:00 PM ET is that turning point.
+The webinar on [WEBINAR DATE] at [WEBINAR TIME] is that turning point.
 
 Here's what's different about showing up LIVE vs. just catching a replay later:
 
@@ -65,7 +65,7 @@ The parents who feel most confident aren't the ones who did the most research. T
 That's what February 5th is about.
 
 Your join link: {{custom.ez_zoom_join_link}}
-📅 February 5, 2026 | 6:00 PM ET
+📅 [WEBINAR DATE] | [WEBINAR TIME]
 
 I'll see you there.
 
@@ -81,7 +81,7 @@ export const EMAIL_1_DAY = {
 Tomorrow at 6:00 PM ET, I'm going live — and I want you there.
 
 Here's your webinar link: {{custom.ez_zoom_join_link}}
-📅 February 5, 2026 | 6:00 PM ET
+📅 [WEBINAR DATE] | [WEBINAR TIME]
 
 I want to be straight with you about something.
 
@@ -114,7 +114,7 @@ export const EMAIL_1_HOUR = {
 We go live in ONE HOUR.
 
 Click here to join: {{custom.ez_zoom_join_link}}
-🕕 6:00 PM ET — Tonight
+🕕 [WEBINAR TIME] — Tonight
 
 Before we start, three things:
 

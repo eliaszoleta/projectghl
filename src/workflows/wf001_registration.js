@@ -15,11 +15,11 @@ export const EMAIL_CONFIRMATION = {
 You're in! Your spot for "5 Biggest Fears Parents Face Sending Their Child to College" is confirmed.
 
 Here are your event details:
-📅 Date: February 5, 2026
-🕕 Time: 6:00 PM ET
+📅 Date: [WEBINAR DATE]
+🕕 Time: [WEBINAR TIME]
 🔗 Your join link: {{custom.ez_zoom_join_link}}
 
-Save this email — you'll want it on February 5th.
+Save this email — you'll want it on [WEBINAR DATE].
 
 Here's a preview of what you're going to discover on the webinar:
 
@@ -33,7 +33,7 @@ This is a live session, so your questions get answered in real time.
 
 One more thing: attendees get access to something special I'll be sharing on the webinar. Show up live — you won't want to miss it.
 
-See you February 5th at 6:00 PM ET!
+See you on [WEBINAR DATE] at [WEBINAR TIME]!
 
 Debbie Elder
 
